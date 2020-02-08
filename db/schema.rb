@@ -10,10 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_07_082255) do
+ActiveRecord::Schema.define(version: 2020_02_08_050646) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "entrances", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "inputs", force: :cascade do |t|
     t.text "title"
@@ -27,6 +32,14 @@ ActiveRecord::Schema.define(version: 2020_02_07_082255) do
     t.integer "b_or_a"
     t.string "lesson_title"
     t.integer "lesson_no"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "outputs", force: :cascade do |t|
+    t.text "title"
+    t.text "content"
+    t.text "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
