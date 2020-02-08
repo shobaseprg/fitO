@@ -1,0 +1,2 @@
+module AllInputsHelper
+end
