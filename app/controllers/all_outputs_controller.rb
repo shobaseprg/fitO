@@ -1,0 +1,2 @@
+class AllOutputsController < ApplicationController
+end
