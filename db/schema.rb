@@ -55,8 +55,13 @@ ActiveRecord::Schema.define(version: 2020_02_09_063926) do
   end
 
   create_table "users", force: :cascade do |t|
+    t.string "name", null: false
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
+    t.integer "period", null: false
+    t.string "team", null: false
+    t.integer "output_times", null: false
+    t.integer "rank", null: false
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
