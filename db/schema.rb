@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_09_063926) do
+ActiveRecord::Schema.define(version: 2020_02_09_081734) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,8 +34,10 @@ ActiveRecord::Schema.define(version: 2020_02_09_063926) do
     t.text "title"
     t.text "content"
     t.text "image"
+    t.bigint "lesson_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["lesson_id"], name: "index_inputs_on_lesson_id"
   end
 
   create_table "lessons", force: :cascade do |t|
@@ -50,18 +52,37 @@ ActiveRecord::Schema.define(version: 2020_02_09_063926) do
     t.text "title"
     t.text "content"
     t.text "image"
+    t.bigint "lesson_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["lesson_id"], name: "index_outputs_on_lesson_id"
+  end
+
+  create_table "user_inputs", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "input_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["input_id"], name: "index_user_inputs_on_input_id"
+    t.index ["user_id"], name: "index_user_inputs_on_user_id"
+  end
+
+  create_table "user_outputs", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "output_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["output_id"], name: "index_user_outputs_on_output_id"
+    t.index ["user_id"], name: "index_user_outputs_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "name", null: false
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
-    t.integer "period", null: false
-    t.string "team", null: false
-    t.integer "output_times", null: false
-    t.integer "rank", null: false
+    t.integer "period"
+    t.string "team"
+    t.integer "output_times"
+    t.integer "rank"
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
