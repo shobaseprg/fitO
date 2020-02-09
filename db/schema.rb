@@ -34,9 +34,10 @@ ActiveRecord::Schema.define(version: 2020_02_09_081734) do
     t.text "title"
     t.text "content"
     t.text "image"
-    t.integer "lesson_id"
+    t.bigint "lesson_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["lesson_id"], name: "index_inputs_on_lesson_id"
   end
 
   create_table "lessons", force: :cascade do |t|
@@ -51,23 +52,28 @@ ActiveRecord::Schema.define(version: 2020_02_09_081734) do
     t.text "title"
     t.text "content"
     t.text "image"
-    t.integer "lesson_id"
+    t.bigint "lesson_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["lesson_id"], name: "index_outputs_on_lesson_id"
   end
 
   create_table "user_inputs", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "input_id"
+    t.bigint "user_id"
+    t.bigint "input_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["input_id"], name: "index_user_inputs_on_input_id"
+    t.index ["user_id"], name: "index_user_inputs_on_user_id"
   end
 
   create_table "user_outputs", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "output_id"
+    t.bigint "user_id"
+    t.bigint "output_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["output_id"], name: "index_user_outputs_on_output_id"
+    t.index ["user_id"], name: "index_user_outputs_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
