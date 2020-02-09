@@ -1,0 +1,2 @@
+class UserOutput < ApplicationRecord
+end
