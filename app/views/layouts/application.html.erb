@@ -10,6 +10,15 @@
   </head>
 
   <body>
+   <header class="header">
+      <div class="header__title">
+        <%= link_to "fitO -from input to Output", root_path, class: "fito" %>
+      </div>
+      <div class="">
+        <%= link_to "log in", new_user_session_path, class: "" %>
+        <%= link_to "new account", new_user_registration_path, class: "" %>
+      </div>
+    </header>
     <%= yield %>
   </body>
 </html>
