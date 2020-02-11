@@ -4,16 +4,9 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.2]
   def change
     create_table :users do |t|
       ## Database authenticatable
-<<<<<<< HEAD
-<<<<<<< HEAD
       t.string :name,               null: false, unique: true,default: ""
-      t.string :slack,              null: false, unique: true,default: ""
-=======
-=======
->>>>>>> parent of 1e079e1... pro_logout
-      # t.string :name            
+      t.string :slack,              null: false, unique: true,default: ""         
       t.string :email,              null: false, unique: true,default: ""
->>>>>>> parent of 1e079e1... pro_logout
       t.string :encrypted_password, null: false, default: ""
       t.integer :period,            null: false, default: ""
       t.string :team,                null: false, default: ""
