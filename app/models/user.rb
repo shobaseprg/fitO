@@ -10,8 +10,6 @@ class User < ApplicationRecord
   has_many :outputs, through: :user_outputs
   validates :name, presence: true, uniqueness: true  
   validates :slack, presence: true
-  validates :period, presence: true, length: { minimum: 2 },
-            format: { with: /\d/, message: "periodは半角数字です" }
-# 期を二文字以上、半角数字、のみ
-
+  validates :period, presence: true, 
+             numericality: { only_integer: true ,message: "半角数字です"}
 end
