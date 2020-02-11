@@ -77,9 +77,15 @@ ActiveRecord::Schema.define(version: 2020_02_09_081734) do
   end
 
   create_table "users", force: :cascade do |t|
+<<<<<<< HEAD
+<<<<<<< HEAD
     t.string "name", default: "", null: false
     t.string "slack", default: "", null: false
+=======
+=======
+>>>>>>> parent of 1e079e1... pro_logout
     t.string "email", default: "", null: false
+>>>>>>> parent of 1e079e1... pro_logout
     t.string "encrypted_password", default: "", null: false
     t.integer "period", null: false
     t.string "team", default: "", null: false
