@@ -41,11 +41,9 @@ ActiveRecord::Schema.define(version: 2020_02_09_081734) do
   end
 
   create_table "lessons", force: :cascade do |t|
-    t.integer "b_or_a"
+    t.string "b_or_a"
     t.string "lesson_title"
     t.integer "lesson_no"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "outputs", force: :cascade do |t|
