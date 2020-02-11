@@ -9,7 +9,10 @@ class User < ApplicationRecord
   has_many :user_outputs
   has_many :outputs, through: :user_outputs
   validates :name, presence: true, uniqueness: true  
-  validates :slack, presence: true
+  validates :slack, presence: true,uniqueness: true  
   validates :period, presence: true, 
-             numericality: { only_integer: true ,message: "半角数字です"}
+            numericality: { only_integer: true ,message: "半角数字です"}
+
+
+
 end
