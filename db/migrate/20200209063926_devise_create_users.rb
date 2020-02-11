@@ -4,11 +4,11 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.2]
   def change
     create_table :users do |t|
       ## Database authenticatable
-      t.string :name            
-      t.string :email,              null: false, unique: true,default: ""
+      t.string :name                null: false, unique: true,default: ""
+      t.string :slack,              null: false, unique: true,default: ""
       t.string :encrypted_password, null: false, default: ""
-      t.integer :period           
-      t.string :team            
+      t.integer :period             null: false, default: ""
+      t.string :team                null: false, default: ""
       t.integer :output_times    
       t.integer :rank      
 

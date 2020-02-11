@@ -8,7 +8,7 @@ class User < ApplicationRecord
   has_many :inputs, through: :user_inputs
   has_many :user_outputs
   has_many :outputs, through: :user_outputs
-  # validates :name, presence: true, uniqueness: true
+  validates :name, presence: true, uniqueness: true
 
 
 end
