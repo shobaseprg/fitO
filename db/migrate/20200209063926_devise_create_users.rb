@@ -4,11 +4,11 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.2]
   def change
     create_table :users do |t|
       ## Database authenticatable
-      t.string :name                null: false, unique: true,default: ""
+      t.string :name,               null: false, unique: true,default: ""
       t.string :slack,              null: false, unique: true,default: ""
       t.string :encrypted_password, null: false, default: ""
-      t.integer :period             null: false, default: ""
-      t.string :team                null: false, default: ""
+      t.integer :period,            null: false, default: ""
+      t.string :team,                null: false, default: ""
       t.integer :output_times    
       t.integer :rank      
 
@@ -41,7 +41,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.2]
       t.timestamps null: false
     end
 
-    add_index :users, :email,                unique: true
+    add_index :users, :slack,                unique: true
     add_index :users, :reset_password_token, unique: true
     # add_index :users, :confirmation_token,   unique: true
     # add_index :users, :unlock_token,         unique: true

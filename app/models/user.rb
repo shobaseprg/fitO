@@ -8,7 +8,10 @@ class User < ApplicationRecord
   has_many :inputs, through: :user_inputs
   has_many :user_outputs
   has_many :outputs, through: :user_outputs
-  validates :name, presence: true, uniqueness: true
-
+  validates :name, presence: true, uniqueness: true  
+  validates :slack, presence: true
+  validates :period, presence: true, length: { minimum: 2 },
+            format: { with: /\d/, message: "periodは半角数字です" }
+# 期を二文字以上、半角数字、のみ
 
 end
