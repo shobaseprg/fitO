@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="UTF-8">
     <title>FitO</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -10,15 +11,35 @@
   </head>
 
   <body>
-   <header class="header">
-      <div class="header__title">
-        <%= link_to "fitO -from input to Output", root_path, class: "fito" %>
+  <div class = "wrapper">
+
+    <header class="header">
+    <div class = "header__up">
+      <div class = header__up__titles>
+          <div class="header__up__titles__title">
+            <%= link_to "fitO", root_path, class: "fito" %>
+          </div>
+          <div class ="header__up__titles__subtitle">
+            <%= link_to "-from input to Out put-", root_path, class: "subtitle" %>
+          </div>
       </div>
-      <div class="">
-        <%= link_to "log in", new_user_session_path, class: "" %>
-        <%= link_to "new account", new_user_registration_path, class: "" %>
+      
+      <div class = "header__up__account">
+        <% if user_signed_in? %>
+          <%= link_to "account edit ", edit_user_registration_path, method: :get, class: "account_btn" %>
+          <%= link_to "log Out ", destroy_user_session_path, method: :delete, class: "account_btn" %>
+        <% else %>
+          <%= link_to "log in", new_user_session_path, class: "account_btn" %>
+          <%= link_to "create account", new_user_registration_path, class: "account_btn" %>
+        <% end %>
       </div>
+    </div>
+
+
+        <div class ="infomation">
+        </div>
     </header>
     <%= yield %>
+  </div>
   </body>
 </html>
