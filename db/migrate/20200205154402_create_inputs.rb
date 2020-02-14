@@ -4,7 +4,6 @@ class CreateInputs < ActiveRecord::Migration[5.2]
       t.text :title
       t.text :content 
       t.text :image
-      t.references :lesson, foregin_key: true
       t.timestamps
     end
   end

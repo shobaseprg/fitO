@@ -34,10 +34,8 @@ ActiveRecord::Schema.define(version: 2020_02_09_081734) do
     t.text "title"
     t.text "content"
     t.text "image"
-    t.bigint "lesson_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["lesson_id"], name: "index_inputs_on_lesson_id"
   end
 
   create_table "lessons", force: :cascade do |t|
@@ -50,10 +48,8 @@ ActiveRecord::Schema.define(version: 2020_02_09_081734) do
     t.text "title"
     t.text "content"
     t.text "image"
-    t.bigint "lesson_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["lesson_id"], name: "index_outputs_on_lesson_id"
   end
 
   create_table "user_inputs", force: :cascade do |t|
