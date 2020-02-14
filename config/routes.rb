@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root to: 'entrances#index'
   resources :all_outputs, only: [:index]
   resources :lessons do
-    resources :inputs , only: [:index]
+    resources :inputs , only: [:index, :new, :create]
   end
 end
 
