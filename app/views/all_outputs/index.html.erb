@@ -3,7 +3,11 @@ kiso ouyou
 </div>
 
   基礎 lesson1
-<% @lessonskone.each do |lesson| %>
-  <%= lesson.title %>
+<% @lessonsKisoOne.each do |lesson| %>
+  <%= link_to "#{lesson.title}","/lessons/#{lesson.id}/inputs" %>
+<% end %>
+  基礎 lesson2
+<% @lessonsKisoTwo.each do |lesson| %>
+  <%= link_to "#{lesson.title}","/lessons/#{lesson.id}/inputs" %>
 <% end %>
  

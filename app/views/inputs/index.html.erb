@@ -1,7 +1,9 @@
 <div class = 'input_wrappar'>
 
-<% @inputs.each do |input| %>
-      <%= input.title %>
+<% @outputs.each do |output| %>
+      <%= output.title %>
+      <%= output.content%>
+      <%= output.user.name%>
 <% end %>
 
 </div>

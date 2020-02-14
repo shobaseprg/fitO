@@ -1,8 +1,8 @@
 class InputsController < ApplicationController
   
   def index
-    @inputs = Input.where(all_input_id: params[:all_input_id])
-    @all_input_id = params[:all_input_id]
+    @outputs= Input.where(lesson_id: params[:lesson_id]).where(input_or_output: 1)
+    @inputs = Input.where(lesson_id: params[:lesson_id]).where(input_or_output: 2)
   end
 
   def new
