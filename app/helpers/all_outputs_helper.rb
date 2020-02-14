@@ -1,0 +1,2 @@
+module AllOutputsHelper
+end

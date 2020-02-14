@@ -10,18 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_09_081734) do
+ActiveRecord::Schema.define(version: 2020_02_14_162716) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "all_inputs", force: :cascade do |t|
-    t.integer "lesson_no"
-    t.integer "kiso_or_oyou"
-    t.text "lesson_title"
-  end
-
-  create_table "all_outputs", force: :cascade do |t|
   end
 
   create_table "entrances", force: :cascade do |t|
@@ -33,36 +27,17 @@ ActiveRecord::Schema.define(version: 2020_02_09_081734) do
     t.text "title"
     t.text "content"
     t.text "image"
-    t.bigint "all_input_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["all_input_id"], name: "index_inputs_on_all_input_id"
-  end
-
-  create_table "outputs", force: :cascade do |t|
-    t.text "title"
-    t.text "content"
-    t.text "image"
+    t.integer "lesson_id"
+    t.integer "user_id"
+    t.integer "input_or_output"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "user_inputs", force: :cascade do |t|
-    t.bigint "user_id"
-    t.bigint "input_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["input_id"], name: "index_user_inputs_on_input_id"
-    t.index ["user_id"], name: "index_user_inputs_on_user_id"
-  end
-
-  create_table "user_outputs", force: :cascade do |t|
-    t.bigint "user_id"
-    t.bigint "input_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["input_id"], name: "index_user_outputs_on_input_id"
-    t.index ["user_id"], name: "index_user_outputs_on_user_id"
+  create_table "lessons", force: :cascade do |t|
+    t.integer "k_or_o"
+    t.integer "lesson_no"
+    t.string "title"
   end
 
   create_table "users", force: :cascade do |t|
