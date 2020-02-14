@@ -21,9 +21,6 @@ ActiveRecord::Schema.define(version: 2020_02_09_081734) do
     t.text "lesson_title"
   end
 
-  create_table "all_outputs", force: :cascade do |t|
-  end
-
   create_table "entrances", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -33,16 +30,7 @@ ActiveRecord::Schema.define(version: 2020_02_09_081734) do
     t.text "title"
     t.text "content"
     t.text "image"
-    t.bigint "all_input_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["all_input_id"], name: "index_inputs_on_all_input_id"
-  end
-
-  create_table "outputs", force: :cascade do |t|
-    t.text "title"
-    t.text "content"
-    t.text "image"
+    t.integer "all_input_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

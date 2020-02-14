@@ -4,10 +4,7 @@ class CreateInputs < ActiveRecord::Migration[5.2]
       t.text :title
       t.text :content 
       t.text :image
-      t.references :all_input, foregin_key: true
-
-
-
+      t.integer :all_input_id
       t.timestamps
     end
   end
