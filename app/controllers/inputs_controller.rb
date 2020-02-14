@@ -2,8 +2,6 @@ class InputsController < ApplicationController
   
   def index
     @inputs = Input.where(all_input_id: params[:all_input_id])
-    #  proinput =  Input.find(1)
-    # @user = proinput.users.name
     @all_input_id = params[:all_input_id]
   end
 
@@ -12,9 +10,10 @@ class InputsController < ApplicationController
   end
 
   def create
-    input = Input.create(input_params)
-    UserInput.create(user_id: current_user.id,input_id: input.id)
+    Input.create!(input_params)
+    
     redirect_to "/"
+
   end
   
   private
