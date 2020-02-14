@@ -1,5 +1,5 @@
 class UserOutput < ApplicationRecord
   belongs_to :user 
-  belongs_to :output 
+  belongs_to :input 
 
 end
