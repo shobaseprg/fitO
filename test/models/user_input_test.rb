@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class OutputControllerTest < ActionDispatch::IntegrationTest
+class UserInputTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

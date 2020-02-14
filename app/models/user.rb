@@ -4,9 +4,14 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  has_many :inputs
+  has_many :user_inputs
+  has_many :inputs, through: :user_inputs
+  has_many :inputs, through: :user_outputs
   validates :name, presence: true, uniqueness: true  
   validates :slack, presence: true,uniqueness: true  
   validates :period, presence: true, 
             numericality: { only_integer: true ,message: "半角数字です"}
+
+
+
 end
