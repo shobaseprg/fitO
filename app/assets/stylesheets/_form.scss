@@ -1,0 +1,26 @@
+.form-wrapper{
+  align-items: center;
+  display: block;
+
+  form{
+    background-color: yellowgreen;
+    margin-left:100px;
+    height: 800px;
+    width: 800px;
+    margin: 0 auto;
+    display: block;
+
+    input,textarea {
+      width: 100%;
+      margin-top:20px ;
+      border-radius: 5px;
+      font-family: "游ゴシック", "YuGothic";
+    }
+
+    input[type="submit"] {
+    width: 100px;
+    
+    }
+  }
+
+}
