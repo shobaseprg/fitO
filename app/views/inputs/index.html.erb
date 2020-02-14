@@ -1,0 +1,13 @@
+<div class = 'input_wrappar'>
+
+<% @inputs.each do |input| %>
+      <%= input.title %>
+<% end %>
+
+</div>
+
+<div class = 'input__footer'>
+  <div class = 'input__footer__btn'>
+  <%= link_to "create input" ,"/all_inputs/#{@all_input_id}/inputs/new" %>
+  </div>
+</div>

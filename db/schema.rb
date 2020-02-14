@@ -16,13 +16,12 @@ ActiveRecord::Schema.define(version: 2020_02_09_081734) do
   enable_extension "plpgsql"
 
   create_table "all_inputs", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer "lesson_no"
+    t.integer "kiso_or_oyou"
+    t.text "lesson_title"
   end
 
   create_table "all_outputs", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "entrances", force: :cascade do |t|
@@ -34,26 +33,18 @@ ActiveRecord::Schema.define(version: 2020_02_09_081734) do
     t.text "title"
     t.text "content"
     t.text "image"
-    t.bigint "lesson_id"
+    t.bigint "all_input_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["lesson_id"], name: "index_inputs_on_lesson_id"
-  end
-
-  create_table "lessons", force: :cascade do |t|
-    t.string "b_or_a"
-    t.string "lesson_title"
-    t.integer "lesson_no"
+    t.index ["all_input_id"], name: "index_inputs_on_all_input_id"
   end
 
   create_table "outputs", force: :cascade do |t|
     t.text "title"
     t.text "content"
     t.text "image"
-    t.bigint "lesson_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["lesson_id"], name: "index_outputs_on_lesson_id"
   end
 
   create_table "user_inputs", force: :cascade do |t|
@@ -67,10 +58,10 @@ ActiveRecord::Schema.define(version: 2020_02_09_081734) do
 
   create_table "user_outputs", force: :cascade do |t|
     t.bigint "user_id"
-    t.bigint "output_id"
+    t.bigint "input_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["output_id"], name: "index_user_outputs_on_output_id"
+    t.index ["input_id"], name: "index_user_outputs_on_input_id"
     t.index ["user_id"], name: "index_user_outputs_on_user_id"
   end
 

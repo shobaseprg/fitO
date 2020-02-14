@@ -6,8 +6,7 @@ class User < ApplicationRecord
 
   has_many :user_inputs
   has_many :inputs, through: :user_inputs
-  has_many :user_outputs
-  has_many :outputs, through: :user_outputs
+  has_many :inputs, through: :user_outputs
   validates :name, presence: true, uniqueness: true  
   validates :slack, presence: true,uniqueness: true  
   validates :period, presence: true, 
