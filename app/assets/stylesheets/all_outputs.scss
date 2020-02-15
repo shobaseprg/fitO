@@ -19,11 +19,11 @@
       line-height: 40px;
   }
   
-.base-btn{
-  background-color:pink;
+.input-btn{
+  background-color:green;
 }
 
-.development-btn{
+.output-btn{
   background-color: white;
 }
 .input-base-dev-btns{
@@ -45,9 +45,13 @@
   background-color: white;
 }
 
+
+
+
 .output-base-dev-btns{
   display: none;
 }
+
 
 .Show{
   display: block;
@@ -55,10 +59,4 @@
 
 .notShow{
   display: none;
-}
-
-.InputkisoLessons{
-  background-color: pink;
-  width: 100%;
-
 }

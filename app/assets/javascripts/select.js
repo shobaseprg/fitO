@@ -11,7 +11,7 @@ $(function() {
     $(".input-base-dev-btns")[0].classList.remove("Show");
   };
 
-  $(".base-btn").click(showInputBtns);
+  $(".input-btn").click(showInputBtns);
   $(".output-btn").click(showOutputBtns);
 
 
