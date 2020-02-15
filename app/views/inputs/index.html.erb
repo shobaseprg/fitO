@@ -1,15 +1,33 @@
 <div class = 'input_wrappar'>
 
-<% @outputs.each do |output| %>
-      <%= output.title %>
-      <%= output.content%>
-      <%= output.user.name%>
-<% end %>
+  <% @outputs.each do |output| %>
+    <div class= "output-box"> 
+        <div class = "output-title">
+          <%= output.title %>
+        </div>
 
+        <div class ="output_content">
+          <%= simple_format output.content%>
+        </div>
+
+        <div class ="output_image">
+            <%= link_to "image" "#{output.image}" %>
+        </div>
+
+        <div class ="output_name">
+            name:
+            <%= output.user.name%>
+              slack:
+            <%= output.user.slack%>
+        </div>
+    </div>
+  <% end %>
 </div>
 
-<div class = 'input__footer'>
-  <div class = 'input__footer__btn'>
-  <%= link_to "create input" ,"/lessons/#{@lesson_id}/inputs/new" %>
+</div>
+  <div class = 'input__footer'>
+    <div class = 'input__footer__btn'>
+    <%= link_to "create input" ,"/lessons/#{@lesson_id}/inputs/new" %>
+    </div>
   </div>
-</div>
+

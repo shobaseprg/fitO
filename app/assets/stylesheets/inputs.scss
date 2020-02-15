@@ -1,7 +1,38 @@
 .input_wrappar{
-  height: calc(100vh - 180px);
+  height: calc(100vh - 200px);
   background-color: pink;
+
+  .output-box{
+    word-break: break-all;
+    width:1000px;
+    margin: 0 auto;
+    background-color: green;
+    margin-top :30px;
+    .output-title{
+      background-color:white;
+      font-size: 25px;
+    }
+    .output_content{
+      font-size: 15px;
+      background-color: grey;
+    }
+
+    .output_image{
+      background-color:blue;
+      font-size: 15px;
+    }
+
+    .output_name{
+      background-color: chocolate;
+      font-size: 15px;
+      display: flex;
+      justify-content:space-between;
+
+    }
+
+  }
 }
+
 .input__footer{
     height:50px;  
     background-color: blue;
