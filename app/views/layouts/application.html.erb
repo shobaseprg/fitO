@@ -23,7 +23,7 @@
             <%= link_to "-from input to Out put-", root_path, class: "subtitle" %>
           </div>
       </div>
-      
+
       <div class = "header__up__account">
         <% if user_signed_in? %>
           <%= link_to "マイページ", "/users/#{current_user.id}",class: "account_btn" %>
@@ -37,8 +37,19 @@
     </div>
 
 
-        <div class ="infomation">
-        </div>
+    <div class ="infomation">
+      <div class = "infomation__my-data">
+        my output times  :
+        <%=  current_user.output_times%>
+      </div>
+
+      <div class = "infomation__my-data">
+        runking  :  
+      
+
+
+      
+    </div>
     </header>
     <%= yield %>
   </div>

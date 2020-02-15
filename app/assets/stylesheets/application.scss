@@ -58,8 +58,13 @@ a{
 
   .infomation{
     height:50px;
-    background-color: black;
+    background-color: yellow;
     width: 100%;
+    text-align: center;
+    line-height: 50px;
+    &__my-data{
+      font-size: 20;
+    }
 
   }
   .main{
