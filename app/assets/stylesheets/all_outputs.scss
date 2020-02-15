@@ -1,3 +1,62 @@
-// Place all the styles related to the all_outputs controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.sellect-lesson-wrapper{
+  height: calc(100vh - 100px);
+  width: 100%;
+  background-color: green;
+}
+  .btn-frame{
+    height: 50px;
+    width: 100%;
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+  }
+
+  .btn{
+      height: 40px;
+      width: 100px;
+      margin: 5px 5px;
+      text-align: center;
+      line-height: 40px;
+  }
+  
+.input-btn{
+  background-color:green;
+}
+
+.output-btn{
+  background-color: white;
+}
+.input-base-dev-btns{
+  display: none;
+}
+
+.inputBaseBtn {
+  background-color:green;
+}
+.inputDevBtn{
+  background-color: green;
+}
+
+.outputBaseBtn{
+  background-color: white;
+}
+
+.outputDevBtn{
+  background-color: white;
+}
+
+
+
+
+.output-base-dev-btns{
+  display: none;
+}
+
+
+.Show{
+  display: block;
+}
+
+.notShow{
+  display: none;
+}

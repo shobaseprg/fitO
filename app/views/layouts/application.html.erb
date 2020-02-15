@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <meta charset="UTF-8">
     <title>FitO</title>
     <%= csrf_meta_tags %>
@@ -11,6 +12,7 @@
   </head>
 
   <body>
+
   <div class = "wrapper">
 
     <header class="header">
@@ -43,7 +45,7 @@
         = {
         my output times  :
         <%=  current_user.output_times%>
-        }／／
+        }
       </div>
 
       <div class = "infomation__ranking">
