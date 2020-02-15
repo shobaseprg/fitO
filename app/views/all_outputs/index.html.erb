@@ -1,46 +1,50 @@
 <div class = "sellect-lesson-wrapper">
 
-  <div class = "input-output-btns btn-frame">
-    <div class = "btn input-btn">
-    input
+  <div class = "btns btn-frame">
+    <div class = "btn base-btn">
+    bese
     </div>
-    <div class = "btn output-btn">
-    output
+    <div class = "btn development-btn">
+    development
     </div>
   </div>
   
-  <div class= input-base-dev-btns >
-      <div class = " btn-frame ">
 
-          <div class = "btn inputBaseBtn">
-            i base
-          </div>
-          <div class = "btn inputDevBtn">
-            i development
-          </div>
-      </div>
-  </div>
+<div class = "baseLessons">
+    <div class =" lesonNo">
+      基礎 lesson1
+    </div>
+    <div>
+    <% @lessonsKisoOne.each do |lesson| %>
+      <%= link_to "#{lesson.title}","/lessons/#{lesson.id}/inputs" %>
+    <% end %>
+    </div>
 
-  <div class= output-base-dev-btns >
-      <div class = "btn-frame">
-        <div class = "btn outputBaseBtn">
-          o base
-        </div>
-        <div class = "btn outputDevBtn">
-          o development
-        </div>
-      </div>
-  </div>
+    <div>
+      基礎 lesson2
+    <div>
+    <% @lessonsKisoTwo.each do |lesson| %>
+      <%= link_to "#{lesson.title}","/lessons/#{lesson.id}/inputs" %>
+    <% end %>
+    </div>
 
+    <div class = "developmentLessons">
+    <div class =" lesonNo">
+      基礎 lesson1
+    </div>
+    <div>
+    <% @lessonsKisoOne.each do |lesson| %>
+      <%= link_to "#{lesson.title}","/lessons/#{lesson.id}/inputs" %>
+    <% end %>
+    </div>
 
-
-  基礎 lesson1
-<% @lessonsKisoOne.each do |lesson| %>
-  <%= link_to "#{lesson.title}","/lessons/#{lesson.id}/inputs" %>
-<% end %>
-  基礎 lesson2
-<% @lessonsKisoTwo.each do |lesson| %>
-  <%= link_to "#{lesson.title}","/lessons/#{lesson.id}/inputs" %>
-<% end %>
+    <div>
+      基礎 lesson2
+    <
+    <div>
+    <% @lessonsKisoTwo.each do |lesson| %>
+      <%= link_to "#{lesson.title}","/lessons/#{lesson.id}/inputs" %>
+    <% end %>
+    </div>
 
 </div>
