@@ -2,4 +2,5 @@
       <%= myinput.title %>
       <%= myinput.content%>
       <%= myinput.user.name%>
+      <%= link_to "教えてもらった",  "/lessons/#{myinput.id}" ,method: :PATCH %>
 <% end %>

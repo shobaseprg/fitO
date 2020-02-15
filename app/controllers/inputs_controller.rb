@@ -6,16 +6,18 @@ class InputsController < ApplicationController
     @lesson_id = params[:lesson_id]
   end
 
+
   def new
     @input = Input.new
   end
 
   def create
-    Input.create!(input_params)
+    Input.create(input_params)
     
     redirect_to "/"
 
   end
+
   
   private
     def input_params
