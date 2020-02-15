@@ -39,17 +39,30 @@
 
     <div class ="infomation">
       <div class = "infomation__my-data">
-        my output times  :
+        <%=  current_user.name%>
+        (my output times  :
         <%=  current_user.output_times%>
+        )／／
       </div>
 
-      <div class = "infomation__my-data">
-        runking  :  
-      
-
-
-      
+      <div class = "infomation__ranking">
+          (ranking  :  
+        <% rank_users = User.order(output_times: "DESC").limit(3)%>
+        <% rank = 1%>
+        <% rank_users.each do |rank_user|%>
+        <%= rank%>
+        {
+          <%= rank_user.name%>
+        [
+        <%= rank_user.output_times%>
+        times]} ／
+        <% rank += 1%>
+        <% end %> 
+          )
+      </div>
+    
     </div>
+
     </header>
     <%= yield %>
   </div>

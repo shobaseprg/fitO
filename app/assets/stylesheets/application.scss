@@ -62,10 +62,8 @@ a{
     width: 100%;
     text-align: center;
     line-height: 50px;
-    &__my-data{
-      font-size: 20;
-    }
-
+    display: flex;
+    justify-content: center;
   }
   .main{
     padding-top: 100px;
