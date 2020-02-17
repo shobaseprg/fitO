@@ -3,6 +3,8 @@
   width: 100%;
   background-color: green;
 }
+
+// ボタン二つの枠組み用
   .btn-frame{
     height: 50px;
     width: 100%;
@@ -11,52 +13,66 @@
     justify-content: center;
   }
 
+  // ボタン一個一個の形
   .btn{
       height: 40px;
-      width: 100px;
+      width: 200px;
       margin: 5px 5px;
       text-align: center;
       line-height: 40px;
   }
   
+  // インプットボタン専用
 .input-btn{
   background-color:green;
 }
-
+// アウトプットボタン専用
 .output-btn{
   background-color: white;
 }
+
+// インプットに付随する基礎応用ボタンデフォルト消去用
 .input-base-dev-btns{
   display: none;
 }
-
+// インプットの基礎ボタン用
 .inputBaseBtn {
   background-color:green;
 }
+// インプットの応用ボタン用
 .inputDevBtn{
   background-color: green;
 }
-
+// アウトプットの基礎ボタン用
 .outputBaseBtn{
   background-color: white;
 }
-
+// アウトプットの応用ボタン用
 .outputDevBtn{
   background-color: white;
 }
 
-
-
-
+// アウトプットに付随する基礎応用ボタンデフォルト消去用
 .output-base-dev-btns{
   display: none;
 }
 
-
+// 表示するときに与える用
 .Show{
   display: block;
 }
-
-.notShow{
-  display: none;
+// レッスン表示全体用
+.lessonsAllBox{
+  margin-top: 40px;
+  width: 95vw;
+  height:70vh;
+  background-color:yellow;
+  margin: 0 auto;
 }
+
+// レッスン基礎 応用 インプット　アウトプット個別用
+
+.notshow{
+  display:none;
+}
+

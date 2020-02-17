@@ -14,7 +14,7 @@ class LessonsController < ApplicationController
   def create
     @user = User.find_by(name: params[:name])
     if @user
-    @user.output_times =+ 1
+    @user.output_times += 1
     @user.save
     else
       redirect_to "/lessons/new "

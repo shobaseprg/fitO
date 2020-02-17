@@ -19,7 +19,7 @@ a{
       background-color: greenyellow; 
       display: flex;
       align-items: center;
-      width: 300px;
+      width:30%;
       &__title{
         background-color:red;
         margin-left: 30px;
@@ -28,7 +28,7 @@ a{
       }
       &__subtitle{
       height:60px;
-      width: 200px;
+      width: 100%;
       background-color:blue ;
       position: relative;
 
