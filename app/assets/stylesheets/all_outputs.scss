@@ -1,7 +1,5 @@
 .sellect-lesson-wrapper{
-  height: calc(100vh - 100px);
-  width: 100%;
-  background-color: green;
+ 
 }
 
 // ボタン二つの枠組み用
@@ -22,7 +20,7 @@
       line-height: 40px;
   }
   
-  // インプットボタン専用
+// ファーストボタン用
 .first-btn{
   background-color:black;
   color: white;
@@ -33,28 +31,53 @@
   color: black;
 }
 
+// セカンドボタンデフォルト非表示用
 .secondBtns{
   display: none;
 }
 
+// セカンドボタン形色用
 .secondBtn{
   background-color: white;
   color: black;
 }
 
+// セカンドボタン表示用
 .secondBtns-show{
   display: block;
 }
 
+.active-lesson{
+  display:block;
+}
 
-// レッスン表示全体用
-.lessonsAllBox{
-  margin-top: 40px;
+//  デフォルト表示用
+.active-defult-lesson{
+  display: block;
+}
+
+// デフォルト非表示用
+.non-defult-lesson{
+  display: none;
+}
+
+// レッスンボックス形用
+.lessonsBoxform{
   width: 95vw;
-  height:70vh;
+  height:100vh;
   background-color:yellow;
   margin: 0 auto;
 }
 
+// レッスン初期非表示用
+.lessonsAllBox{
+  display: none;
+}
+
+// レッスン表示用
+.lessons-show{
+  display:block;
+
+}
 
 

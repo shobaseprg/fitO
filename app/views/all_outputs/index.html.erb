@@ -15,10 +15,10 @@
   <div class= "secondBtns " >
       <div class = " btn-frame ">      <%# ボタン二つの枠組みようクラス %>
           <div class = "secondBtn btn ">
-            i base
+            input of base
           </div>                   
           <div class = "secondBtn btn ">
-            i development
+            input of development
           </div>
       </div>
   </div>
@@ -27,20 +27,37 @@
   <div class= "secondBtns " >
       <div class = "btn-frame">
         <div class = "secondBtn btn ">
-          o base
+          Output of base
         </div>
         <div class = "secondBtn btn ">
-          o development
+          Output of development
         </div>
       </div>
   </div>
 </div>
 
-<div class ="lessonsAllBox">
+<%# レッスンデフォルト表示用 %>
+<div class = "defultLesson active-defult-lesson">
+  <div class ="lessonsBoxform">
+  defult
+  </div>
+</div>
+
+<%# インプット基礎 %>
+
+ <div class ="lessonsAllBox lessonsBoxform" >
+ インプット基礎
+ </div>
+
+ <%# インプット応用 %>
+
+ <div class ="lessonsAllBox lessonsBoxform" >
+ インプット応用
+ </div>
+
 
   <%# アウトプット  基礎 %>
-<div class= "delete">
-  <div class ="outputBaseLesson lessons-boxs notshow" >
+  <div class ="lessonsAllBox lessonsBoxform" >
     OUTPUT → BASE
       
       <div class = "lesson-no">
@@ -67,7 +84,7 @@
 
 
 <%# アウトプット 応用 %>
-  <div class ="outputDevelopmentLesson lessons-boxs notshow" >
+  <div class ="lessonsAllBox lessonsBoxform" >
       OUTPUT → DEVELOPMENT
 
       <div class = "lesson-no">
