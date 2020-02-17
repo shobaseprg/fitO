@@ -24,21 +24,11 @@
   
   // インプットボタン専用
 .input-btn{
-
+  background-color:green;
 }
 // アウトプットボタン専用
 .output-btn{
-
-}
-
-.btn-active{
-  background-color:white;
-  color: black;
-}
-
-.btn-not-active{
-  background-color:black;
-  color: white;
+  background-color: white;
 }
 
 // インプットに付随する基礎応用ボタンデフォルト消去用
@@ -48,7 +38,6 @@
 // インプットの基礎ボタン用
 .inputBaseBtn {
   background-color:green;
-  color: white;
 }
 // インプットの応用ボタン用
 .inputDevBtn{
@@ -57,7 +46,6 @@
 // アウトプットの基礎ボタン用
 .outputBaseBtn{
   background-color: white;
-  color: white;
 }
 // アウトプットの応用ボタン用
 .outputDevBtn{

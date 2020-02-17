@@ -1,10 +1,5 @@
 $(function() {
   function showInputBtns(){
-
-    $(".input-btn")[0].classList.add("btn-active");
-    $(".output-btn")[0].classList.add("btn-not-active");
-
-
     $(".input-base-dev-btns")[0].classList.add("Show");
 
     $(".output-base-dev-btns")[0].classList.add("Show");
@@ -12,10 +7,6 @@ $(function() {
   };
 
   function showOutputBtns(){
-    $(".output-btn")[0].classList.remove("btn-not-active");
-    $(".output-btn")[0].classList.add("btn-active");
-    $(".intput-btn")[0].classList.remove("btn-active");
-
     $(".output-base-dev-btns")[0].classList.add("Show");
 
     $(".input-base-dev-btns")[0].classList.add("Show");
