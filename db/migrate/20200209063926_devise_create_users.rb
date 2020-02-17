@@ -13,8 +13,8 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.2]
       t.string :encrypted_password, null: false, default: ""
       t.integer :period,            null: false, default: ""
       t.string :team,                null: false, default: ""
-      t.integer :output_times    
-      t.integer :rank      
+      t.integer :output_times, default: "0"    
+      t.integer :rank
 
       ## Recoverable
       t.string   :reset_password_token

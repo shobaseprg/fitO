@@ -1,3 +1,83 @@
-// Place all the styles related to the all_outputs controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.sellect-lesson-wrapper{
+ 
+}
+
+// ボタン二つの枠組み用
+  .btn-frame{
+    height: 50px;
+    width: 100%;
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+  }
+
+  // ボタン一個一個の形
+  .btn{
+      height: 40px;
+      width: 200px;
+      margin: 5px 5px;
+      text-align: center;
+      line-height: 40px;
+  }
+  
+// ファーストボタン用
+.first-btn{
+  background-color:black;
+  color: white;
+}
+// ファーストボタンアクティブ用
+.active-btn{
+  background-color: white;
+  color: black;
+}
+
+// セカンドボタンデフォルト非表示用
+.secondBtns{
+  display: none;
+}
+
+// セカンドボタン形色用
+.secondBtn{
+  background-color: white;
+  color: black;
+}
+
+// セカンドボタン表示用
+.secondBtns-show{
+  display: block;
+}
+
+.active-lesson{
+  display:block;
+}
+
+//  デフォルト表示用
+.active-defult-lesson{
+  display: block;
+}
+
+// デフォルト非表示用
+.non-defult-lesson{
+  display: none;
+}
+
+// レッスンボックス形用
+.lessonsBoxform{
+  width: 95vw;
+  height:100vh;
+  background-color:yellow;
+  margin: 0 auto;
+}
+
+// レッスン初期非表示用
+.lessonsAllBox{
+  display: none;
+}
+
+// レッスン表示用
+.lessons-show{
+  display:block;
+
+}
+
+

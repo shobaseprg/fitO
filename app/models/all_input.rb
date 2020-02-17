@@ -1,2 +1,0 @@
-class AllInput < ApplicationRecord
-end

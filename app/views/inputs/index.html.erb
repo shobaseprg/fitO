@@ -1,13 +1,28 @@
 <div class = 'input_wrappar'>
 
-<% @inputs.each do |input| %>
-      <%= input.title %>
-<% end %>
+  <% @inputs.each do |input| %>
+    <div class= "input-box"> 
+        <div class = "input-title">
+          <%= input.title %>
+        </div>
 
+        <div class ="input_content">
+          <%= simple_format input.content%>
+        </div>
+
+        <div class ="input_image">
+            <%= link_to "image" "#{input.image}" %>
+        </div>
+
+        <div class ="input_name">
+            name:
+            <%= input.user.name%>
+              slack:
+            <%= input.user.slack%>
+        </div>
+    </div>
+  <% end %>
 </div>
 
-<div class = 'input__footer'>
-  <div class = 'input__footer__btn'>
-  <%= link_to "create input" ,"/all_inputs/#{@all_input_id}/inputs/new" %>
-  </div>
-</div>
+
+

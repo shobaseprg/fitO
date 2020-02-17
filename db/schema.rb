@@ -10,12 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_14_162716) do
+ActiveRecord::Schema.define(version: 2020_02_14_172153) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "all_inputs", force: :cascade do |t|
+  create_table "all_outputs", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "entrances", force: :cascade do |t|
@@ -35,6 +37,7 @@ ActiveRecord::Schema.define(version: 2020_02_14_162716) do
   end
 
   create_table "lessons", force: :cascade do |t|
+    t.integer "bd_les_sub"
     t.integer "k_or_o"
     t.integer "lesson_no"
     t.string "title"
@@ -47,7 +50,7 @@ ActiveRecord::Schema.define(version: 2020_02_14_162716) do
     t.string "encrypted_password", default: "", null: false
     t.integer "period", null: false
     t.string "team", default: "", null: false
-    t.integer "output_times"
+    t.integer "output_times", default: 0
     t.integer "rank"
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"

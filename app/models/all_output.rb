@@ -1,0 +1,2 @@
+class AllOutput < ApplicationRecord
+end

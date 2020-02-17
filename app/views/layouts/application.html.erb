@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <meta charset="UTF-8">
     <title>FitO</title>
     <%= csrf_meta_tags %>
@@ -11,6 +12,7 @@
   </head>
 
   <body>
+
   <div class = "wrapper">
 
     <header class="header">
@@ -23,9 +25,10 @@
             <%= link_to "-from input to Out put-", root_path, class: "subtitle" %>
           </div>
       </div>
-      
+
       <div class = "header__up__account">
         <% if user_signed_in? %>
+          <%= link_to "マイページ", "/users/#{current_user.id}",class: "account_btn" %>
           <%= link_to "account edit ", edit_user_registration_path, method: :get, class: "account_btn" %>
           <%= link_to "log Out ", destroy_user_session_path, method: :delete, class: "account_btn" %>
         <% else %>
@@ -35,9 +38,40 @@
       </div>
     </div>
 
+ <% if user_signed_in? %>
+    <div class ="infomation">
+      <div class = "infomation__my-data">
+        <%=  current_user.name%>
+        = {
+        my output times  :
+        <%=  current_user.output_times%>
+        }
+      </div>
 
-        <div class ="infomation">
-        </div>
+      <div class = "infomation__ranking">
+          ranking  =[
+        <% rank_users = User.order(output_times: "DESC").limit(3)%>
+        <% rank = 1%>
+        <% rank_users.each do |rank_user|%>
+          {rank:
+          <%= rank%>
+          ,name:
+          <%= rank_user.name%>
+          ,period:
+          <%= rank_user.period%>
+          ,times:
+        <%= rank_user.output_times%>
+          },
+        <% rank += 1%>
+
+        <% end %> 
+          ];
+      </div>
+
+   <% end %>
+    
+    </div>
+
     </header>
     <%= yield %>
   </div>

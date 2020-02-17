@@ -1,0 +1,47 @@
+<%# users#show.html
+マイページ表示用 %>
+
+<div class = 'input_wrappar'>
+
+  <% @myinputs.each do |myinput| %>
+    <div class= "input-box"> 
+        <div class = "input-title">
+          <%= myinput.title %>
+        </div>
+
+        <div class ="input_content">
+          <%= simple_format myinput.content%>
+        </div>
+
+        <div class ="input_image">
+            <%= link_to "image" "#{myinput.image}" %>
+        </div>
+
+        <div class ="input_name">
+          <%= link_to "教えてもらった",  "/lessons/#{myinput.id}" ,method: :PATCH %>
+        </div>
+    </div>
+  <% end %>
+</div>
+
+
+<div class = 'input_wrappar'>
+
+  <% @myoutputs .each do |myoutput| %>
+    <div class= "input-box"> 
+        <div class = "input-title">
+          <%= myoutput.title %>
+        </div>
+
+        <div class ="input_content">
+          <%= simple_format myoutput.content%>
+        </div>
+
+        <div class ="input_image">
+            <%= link_to "image" "#{myoutput.image}" %>
+        </div>
+
+    </div>
+  <% end %>
+</div>
+
