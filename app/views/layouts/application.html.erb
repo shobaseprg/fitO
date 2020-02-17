@@ -41,31 +41,31 @@
  <% if user_signed_in? %>
     <div class ="infomation">
       <div class = "infomation__my-data">
+        my data = {name :
         <%=  current_user.name%>
-        = {
-        my output times  :
+       
+        Output times  :
         <%=  current_user.output_times%>
         }
       </div>
 
       <div class = "infomation__ranking">
-          ranking  =[
         <% rank_users = User.order(output_times: "DESC").limit(3)%>
         <% rank = 1%>
+
         <% rank_users.each do |rank_user|%>
-          {rank:
+          rank 
           <%= rank%>
-          ,name:
+          = {name:
           <%= rank_user.name%>
           ,period:
           <%= rank_user.period%>
           ,times:
         <%= rank_user.output_times%>
-          },
+        }
+        <p></p>
         <% rank += 1%>
-
         <% end %> 
-          ];
       </div>
 
    <% end %>
