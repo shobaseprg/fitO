@@ -1,3 +1,7 @@
+<%# lessons#new html
+お礼フォーム用 %>
+
+
 <%= form_with(url:  "/lessons", local: true, method: :POST, class: "") do |form| %>
   <%= form.text_field :name, placeholder: "thanks for", class: "" %>
   <%= form.submit "thanks", class: "" %>

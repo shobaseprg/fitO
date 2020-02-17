@@ -2,6 +2,7 @@ class LessonsController < ApplicationController
 
   
   def  update
+    # インプットをアウトプットに移行させる
     clearInput =  Input.find(params[:id])
     clearInput.input_or_output = "2"
     clearInput.save
@@ -13,7 +14,8 @@ class LessonsController < ApplicationController
 
   def create
     @user = User.find_by(name: params[:name])
-    if @user
+    if @user && @user.name != current_user.name
+      # @userがいて、カレントユーザー名が同じでない場合。
     @user.output_times += 1
     @user.save
     else
