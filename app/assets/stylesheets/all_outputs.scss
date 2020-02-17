@@ -23,14 +23,9 @@
   }
   
   // インプットボタン専用
-.input-btn{
+.first-btn{
   background-color:black;
   color: white;
-}
-// アウトプットボタン専用
-.output-btn{
-  background-color:black;
-  color: white
 }
 // ファーストボタンアクティブ用
 .active-btn{
@@ -38,36 +33,20 @@
   color: black;
 }
 
-// インプットに付随する基礎応用ボタンデフォルト消去用
-.input-base-dev-btns{
-  display: none;
-}
-// インプットの基礎ボタン用
-.inputBaseBtn {
-  background-color:white;
-}
-// インプットの応用ボタン用
-.inputDevBtn{
-  background-color:white;
-}
-// アウトプットの基礎ボタン用
-.outputBaseBtn{
-  background-color: white;
-}
-// アウトプットの応用ボタン用
-.outputDevBtn{
-  background-color: white;
-}
-
-// アウトプットに付随する基礎応用ボタンデフォルト消去用
-.output-base-dev-btns{
+.secondBtns{
   display: none;
 }
 
-// 表示するときに与える用
-.Show{
+.secondBtn{
+  background-color: white;
+  color: black;
+}
+
+.secondBtns-show{
   display: block;
 }
+
+
 // レッスン表示全体用
 .lessonsAllBox{
   margin-top: 40px;
@@ -77,9 +56,5 @@
   margin: 0 auto;
 }
 
-// レッスン基礎 応用 インプット　アウトプット個別用
 
-.notshow{
-  display:none;
-}
 

@@ -4,48 +4,25 @@ let firstBtns = $(".first-btn");
 
   function firstBtnSwith(){
     $(".active-btn").removeClass("active-btn");
+    // active-btnクラスからすべてのactive-btnクラスが削除される
+    // つまり全て元の黒にする。
     $(this).addClass("active-btn");
+    // firstBtnsクラスのうちクリックされたもの（this)にactiveを与える。
+    // つまり白くする。
+
+    const index = firstBtns.index(this);
+    // クッリクされたthisが何番目だったかを取得し、その番号を変数indexに格納する。
+
+    $(".secondBtns").removeClass("secondBtns-show");
+    // secondBtnsクラスからsecondBtns-showクラスを削除する。
+    // つまり非表示にする。
+    $(".secondBtns").eq(index).addClass("secondBtns-show");
+    // クリックされたthisと同じ配列番号のsecondBtnsクラスにsecondBtns-showクラスを与える。
+    // つまり表示される。
+
   }
-
-
-  function showInputBtns(){
-    $(".input-base-dev-btns")[0].classList.add("Show");
-
-    $(".output-base-dev-btns")[0].classList.add("Show");
-    $(".output-base-dev-btns")[0].classList.remove("Show");
-  };
-
-  function showOutputBtns(){
-    $(".output-base-dev-btns")[0].classList.add("Show");
-
-    $(".input-base-dev-btns")[0].classList.add("Show");
-    $(".input-base-dev-btns")[0].classList.remove("Show");
-  };
-
-  // アウトプット基礎表示用
-  function showOutputBaseLessons(){
-    $(".outputBaseLesson")[0].classList.add("Show");
-    console.log("ok");
-  };
-
-  function showOutputDevelopmentLessons(){
-    console.log("ok");
-  };
 
   // ファストボタン起動用
   firstBtns.click(firstBtnSwith);
-
-
-  // アウトプット、インプットそれぞれの基礎応用ボタン発火用
-  $(".input-btn").click(showInputBtns);
-  $(".output-btn").click(showOutputBtns);
-
-
-  $(".inputBaseBtn").click();
-  $(".inputDevBtn").click();
-
-  $(".outputBaseBtn").click(showOutputBaseLessons);
-  $(".outputDevBtn").click(showOutputDevelopmentLessons);
-
 
 });
