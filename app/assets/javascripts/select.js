@@ -1,4 +1,13 @@
 $(function() {
+  // ファーストボタンの二つを変数化
+let firstBtns = $(".first-btn");
+
+  function firstBtnSwith(){
+    $(".active-btn").removeClass("active-btn");
+    $(this).addClass("active-btn");
+  }
+
+
   function showInputBtns(){
     $(".input-base-dev-btns")[0].classList.add("Show");
 
@@ -23,6 +32,8 @@ $(function() {
     console.log("ok");
   };
 
+  // ファストボタン起動用
+  firstBtns.click(firstBtnSwith);
 
 
   // アウトプット、インプットそれぞれの基礎応用ボタン発火用
