@@ -1,0 +1,34 @@
+<div class = 'input_wrappar'>
+
+  <% @outputs.each do |output| %>
+    <div class= "input-box"> 
+        <div class = "input-title">
+          <%= output.title %>
+        </div>
+
+        <div class ="input_content">
+          <%= simple_format output.content%>
+        </div>
+
+        <div class ="input_image">
+            <%= link_to "image" "#{output.image}" %>
+        </div>
+
+        <div class ="input_name">
+            name:
+            <%= output.user.name%>
+              slack:
+            <%= output.user.slack%>
+        </div>
+    </div>
+  <% end %>
+</div>
+
+</div>
+  <div class = 'input__footer'>
+    <div class = 'input__footer__btn'>
+    <%= link_to "create input" ,"/lessons/#{@lesson_id}/inputs/new" %>
+     <%# 同一項目に新しいinputを作成する。 %>
+    </div>
+  </div>
+

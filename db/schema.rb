@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 2020_02_14_172153) do
   end
 
   create_table "lessons", force: :cascade do |t|
+    t.integer "bd_les_sub"
     t.integer "k_or_o"
     t.integer "lesson_no"
     t.string "title"

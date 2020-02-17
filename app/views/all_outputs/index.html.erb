@@ -43,68 +43,94 @@
   </div>
 </div>
 
-<%# インプット基礎 %>
 
- <div class ="lessonsAllBox lessonsBoxform" >
- インプット基礎
- </div>
-
- <%# インプット応用 %>
-
- <div class ="lessonsAllBox lessonsBoxform" >
- インプット応用
- </div>
-
-
-  <%# アウトプット  基礎 %>
+  <%# インププット  基礎 %>
   <div class ="lessonsAllBox lessonsBoxform" >
-    OUTPUT → BASE
-      
-      <div class = "lesson-no">
-        lesson1
-      </div>
+    <div>INPUT → BASE</div>
 
-      <div class = "title">
-        <% @lessonsKisoOne.each do |lesson| %>
-        <%= link_to "#{lesson.title}","/lessons/#{lesson.id}/inputs" %>
-        <% end %>
-      </div>
+             <% num = 1 %>
+              <%  @lessonsBases.each do|lessons|%>
+                lesson :
+                <%= num%>
+                <% lessons.each do|lesson|%>
+                    <div><%= link_to " # #{lesson.title}","/lessons/#{lesson.id}/inputs" %></div>
+                    
+                    <% inputLength = lesson.inputs.where(input_or_output:1) %>
+                    <%= inputLength.length%>
+                <% end%>
+                <% num += 1%>
+              <% end %>
+            </div>
+          </div>
+    </div>
+
+
+<%# インプット  応用 %>
+  <div class ="lessonsAllBox lessonsBoxform" >
+    <div>INPUT → DEVELOPMENT</div>
     
-      <div class = "outputBaseLesson__lesson-no">
-        lesson2
-      </div>
+<% num = 1 %>
+              <% @lessonsDevs.each do|lessons|%>
+                lesson :
+                <%= num%>
+                <% lessons.each do|lesson|%>
+                <div><%= link_to " # #{lesson.title}","/lessons/#{lesson.id}/inputs" %></div>
+              
+                 <% inputLength = lesson.inputs.where(input_or_output:1) %>
+                 <%= inputLength.length%>
 
-      <div class = "outputBaseLesson__title">
-        <% @lessonsKisoTwo.each do |lesson| %>
-        <%= link_to "#{lesson.title}","/lessons/#{lesson.id}/inputs" %>
-        <% end %>
-      </div>
-  </div>
-</div>
+                <% end%>
+                <% num += 1%>
+              <% end %>
+            </div>
+          </div>
+    </div>
 
 
-<%# アウトプット 応用 %>
+<%# アウトプット　基礎 %>
   <div class ="lessonsAllBox lessonsBoxform" >
-      OUTPUT → DEVELOPMENT
+    <div>OUTPUT → DEVELOPMENT
+    
+<% num = 1 %>
+              <%  @lessonsBases.each do|lessons|%>
+                lesson :
+                <%= num%>
+                <% lessons.each do|lesson|%>
+                <div><%= link_to " # #{lesson.title}","/lessons/#{lesson.id}/inputs/1" %></div>
+                <%# 行き先：input#show (アウトプット一覧を表示する) %>
+              
+                  <% inputLength = lesson.inputs.where(input_or_output:2) %>
+                 <%= inputLength.length%>
 
-      <div class = "lesson-no">
-        lesson1
-      </div>
+                <% end%>
+                <% num += 1%>
+              <% end %>
+            </div>
+          </div>
+    </div>
 
-      <div class = "title">
-        <% @lessonsOuyouOne.each do |lesson| %>
-        <%= link_to "#{lesson.title}","/lessons/#{lesson.id}/inputs" %>
-        <% end %>
-      </div>
- 
-      <div class = "lesson-no">
-        lesson2
-      </div>
 
-      <div class = "title">
-        <% @lessonsOuyouTwo.each do |lesson| %>
-        <%= link_to "#{lesson.title}","/lessons/#{lesson.id}/inputs" %>
-        <% end %>
-      </div>
-  </div>
-</div>
+<%# アウトプット応用 %>
+<div class ="lessonsAllBox lessonsBoxform" >
+    <div>OUTPUT → DEVELOPMENT
+    
+<% num = 1 %>
+              <%  @lessonsDevs.each do|lessons|%>
+                lesson :
+                <%= num%>
+                <% lessons.each do|lesson|%>
+                <div><%= link_to " # #{lesson.title}","/lessons/#{lesson.id}/inputs/1" %></div>
+                 
+                 <% inputLength = lesson.inputs.where(input_or_output:2) %>                 
+                 <%= inputLength.length%>
+
+                <% end%>
+                <% num += 1%>
+              <% end %>
+            </div>
+          </div>
+    </div>
+
+
+
+</div> 

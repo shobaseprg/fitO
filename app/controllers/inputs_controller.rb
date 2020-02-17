@@ -1,12 +1,18 @@
 class InputsController < ApplicationController
   
   def index
-    @outputs= Input.where(lesson_id: params[:lesson_id]).where(input_or_output: 1)
-    @lesson_id = params[:lesson_id]
+    # @inputsにall_outputs#indexから送られてきた lesson_idと一致するinputからインプットを格納する。
+    @inputs = Input.where(lesson_id: params[:lesson_id]).where(input_or_output: 1)
+
+
   end
 
   def show
-  @inputs = Input.where(lesson_id: params[:lesson_id]).where(input_or_output: 2)
+    # アウトプットを表示する。下部にnew create input
+  @outputs = Input.where(lesson_id: params[:lesson_id]).where(input_or_output: 2)
+  # @inputsにall_outputs#indexから送られてきた lesson_idと一致するinputから【アウトプット】を格納する。
+  @lesson_id = params[:lesson_id]
+      # lesson_idを@lesson_idに格納する。newする時にどのレッスンか特定するため。
   end
 
   def new
