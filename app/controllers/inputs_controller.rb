@@ -21,11 +21,13 @@ class InputsController < ApplicationController
 
   def create
     Input.create(input_params)
-    
     redirect_to "/"
-
   end
 
+  def destroy
+    clearOutput = Input.find(params[:id]) 
+    clearOutput.destroy
+  end
   
   private
     def input_params

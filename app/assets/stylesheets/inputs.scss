@@ -27,12 +27,17 @@
       font-size: 15px;
       display: flex;
       justify-content:space-between;
-
     }
 
+    .deleteOutput{
+      background-color: yellow;
+      font-size: 15px;
+      display: flex;
+      justify-content:space-between;
+    }
   }
 }
-
+ 
 .input__footer{
     height:50px;  
     background-color: blue;
@@ -46,5 +51,5 @@
       line-height: 40px;
       margin: 0 auto;
     }
-    
-  }
+}
+
