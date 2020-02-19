@@ -1,1 +1,9 @@
-show画面
+<%# lessons#new html
+お礼フォーム用 %>
+
+名前はoutputと一致
+<%= form_with(url:  "/lessons/#{params[:id]}", local: true, method: :DELETE, class: "") do |form| %>
+  <%= form.text_field :name, placeholder: "thanks for", class: "" %>
+  <%= form.submit "thanks", class: "" %>
+<% end %>
+

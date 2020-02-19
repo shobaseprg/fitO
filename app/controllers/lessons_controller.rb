@@ -13,6 +13,7 @@ class LessonsController < ApplicationController
   end
 
   def create
+    # 教えてもらったユーザーのカウントアップ
     @user = User.find_by(name: params[:name])
     if @user && @user.name != current_user.name
       # @userがいて、カレントユーザー名が同じでない場合。
@@ -21,6 +22,12 @@ class LessonsController < ApplicationController
     else
       @errorMessage = "user is no exist or your name!!"
       redirect_to "/lessons/new "
+    end
+
+    def show
+    end
+
+    def destroy
     end
   end
 end
