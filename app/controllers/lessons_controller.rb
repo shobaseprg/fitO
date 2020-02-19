@@ -34,6 +34,8 @@ class LessonsController < ApplicationController
       theOutput = Input.find(params[:id])
       # # 送られてきたparamを元にoutputを特定。
       if thanksUser.name == theOutput.user.name
+        thanksUser.output_times += 1
+        thanksUser.save
          theOutput.destroy
       else
         redirect_to  "/lessons/#{params[:id]}" ,method: :GET
