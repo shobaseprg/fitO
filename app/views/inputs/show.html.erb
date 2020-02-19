@@ -20,9 +20,10 @@
             <%= output.user.slack%>
         </div>
 
-        <div class = "deleteOutput">
-        削除用リンク
-          <%= link_to "教えてもらった" ,"/lessons/1/inputs/#{output.id}", method: :delete%>
+        <div class = "clearOutput">
+        <%# クリアーアウトプットリンク %>
+          <%= link_to "教えてもらった" ,"/lessons/#{output.id}/edit" %>
+          <%# lesson#editに飛ぶ %>
         </div>
     </div>
   <% end %>
