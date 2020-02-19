@@ -1,22 +1,29 @@
 .devise_format{
-  background-color: brown;
+  border: solid;
+  background-color:white;
   width: 300px;
   margin: 0 auto;
   padding: 10px;
+  font-size: 20px;
 }
 
 .content{
+  background: image-url("te.jpg");
+  background-size:cover;
   height: 100%;
   width: 100%;
-  padding-top: 200px;
-  a{
-    text-align: center;
-    margin: 0 auto;
-    display: block;
+  padding-top: 300px;
+  .startBtn{ 
+    a{color: white;}
+    margin:200px auto;
+    border: solid;
+    border-radius: 20px;
+    border-color:white;
     height: 70px;
     width: 300px;
-    background-color:green;
     font-size: 40px;
-    color: white;
-}
+    text-align: center;
+    line-height: 70px;
+    background-color:black;
+   }
 }
