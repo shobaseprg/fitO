@@ -21,9 +21,7 @@ class InputsController < ApplicationController
 
   def create
     Input.create(input_params)
-    
     redirect_to "/"
-
   end
 
   

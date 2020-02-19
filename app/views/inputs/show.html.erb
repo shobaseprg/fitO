@@ -1,3 +1,4 @@
+<%# アウトプット一覧表示用 %>
 <div class = 'input_wrappar'>
 
   <% @outputs.each do |output| %>
@@ -15,20 +16,26 @@
         </div>
 
         <div class ="input_name">
-            name:
-            <%= output.user.name%>
               slack:
             <%= output.user.slack%>
         </div>
+
+        <% if user_signed_in? && current_user.id != output.user.id %>
+        <%# 自分のoutputには教えてもらったは表示させない。 %>
+          <div class = "deleteOutput">
+          削除用リンク
+            <%= link_to "教えてもらった", "/lessons/#{output.id}" ,method: :GET %>
+          </div>
+        <% end %>
     </div>
   <% end %>
 </div>
 
-</div>
   <div class = 'input__footer'>
     <div class = 'input__footer__btn'>
-    <%= link_to "create input" ,"/lessons/#{@lesson_id}/inputs/new" %>
-     <%# 同一項目に新しいinputを作成する。 %>
+    <%# @lesson_id は showコントローラで定義している  %>
+      <%= link_to "create input" ,"/lessons/#{@lesson_id}/inputs/new" %>
+      <%# 同一項目に新しいinputを作成する。 %>
     </div>
   </div>
 
