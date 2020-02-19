@@ -2,18 +2,19 @@
 マイページ表示用 %>
 
 <div class = "btn-frame">
-    <div class = "mypage-btn btn">
+    <div class = "mypage-btn  mypageInputBtn btn">
     input
     </div>
-    <div class = "mypage-btn btn">
+    <div class = "mypage-btn mypageOutputBtn btn">
     Output
     </div>
 </div>
 
+<%# マイページデフォルト %>
 <div class = "mypageDefault">
 </div>
 
-<div class = 'input_wrappar  mypageNonShow activeMypage'>
+<div class = 'input_wrappar mypageInput mypageNonShow '>
   <% @myinputs.each do |myinput| %>
     <div class= "input-box"> 
         <div class = "input-title">
@@ -32,7 +33,7 @@
   <% end %>  <%# each %>
 </div><%# 'input_wrappar'> %>
 
-<div class = 'input_wrappar mypageNonShow'>
+<div class = 'input_wrappar mypageOutput mypageNonShow'>
   <% @myoutputs .each do |myoutput| %>
     <div class= "input-box"> 
         <div class = "input-title">
