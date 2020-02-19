@@ -1,9 +1,10 @@
 <%# lessons#new html
-お礼フォーム用 %>
+インプットからお礼フォーム用 %>
 <% if @errorMessage %>
 <%= @errorMessage%>
 <%else%>
 
+教えていただいた方の名前を入力してください。（自分の名前は入力できません）
 <%= form_with(url:  "/lessons", local: true, method: :POST, class: "") do |form| %>
   <%= form.text_field :name, placeholder: "thanks for", class: "" %>
   <%= form.submit "thanks", class: "" %>

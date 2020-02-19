@@ -17,6 +17,7 @@ class InputsController < ApplicationController
 
   def new
     @input = Input.new
+    @lesson_id = params[:id]
   end
 
   def create

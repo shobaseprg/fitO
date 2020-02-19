@@ -1,0 +1,12 @@
+<%# lessons#show html
+アウトプットからお礼フォーム用 %>
+
+教えていただいた方の名前を入力してください。（outputのユーザー名と一致する必要があります）
+<%= form_with(url:  "lessons/#{params[:id]}", local: true, method: :DELETE, class: "") do |form| %>
+ <%# params[:id]は飛んできた元のoutputのid  %>
+  <%= form.text_field :name, placeholder: "thanks for", class: "" %>
+  <%= form.submit "thanks", class: "" %>
+  <%# lessons#destroyに飛ぶ %>
+<% end %>
+<% end %>
+
