@@ -33,11 +33,10 @@ class LessonsController < ApplicationController
       # 入力されたnameをもつユーザーを取得し、outputUserに格納
       theOutput = Input.find(params[:id])
       # # 送られてきたparamを元にoutputを特定。
-      # if thanksUser.name == theOutput.user.name
+      if thanksUser.name == theOutput.user.name
          theOutput.destroy
-      # else
-      #   @errorMessage = "user is no exist or your name!!"
-      #   redirect_to "/"
-      # end
+      else
+        redirect_to  "/lessons/#{params[:id]}" ,method: :GET
+      end
   end
 end
