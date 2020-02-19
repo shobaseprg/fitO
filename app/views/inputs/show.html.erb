@@ -20,10 +20,9 @@
             <%= output.user.slack%>
         </div>
 
-        <div class = "clearOutput">
+        <div class = "deleteOutput">
         削除用リンク
-          <%= link_to "教えてもらった" "/lessons/#{output.id}", method: :GET%>
-          <%# lessons#show へ飛ぶ %>
+          <%= link_to "教えてもらった" ,"/lessons/1/inputs/#{output.id}", method: :delete%>
         </div>
     </div>
   <% end %>
@@ -32,8 +31,8 @@
   <div class = 'input__footer'>
     <div class = 'input__footer__btn'>
     <%# @lesson_id は showコントローラで定義している  %>
-      <%= link_to "create input" "/lessons/#{@lesson_id}/inputs/new" %>
-      <%# 同一項目に新しいinputを作成する。 input#newに飛ぶ%>
+      <%= link_to "create input" ,"/lessons/#{@lesson_id}/inputs/new" %>
+      <%# 同一項目に新しいinputを作成する。 %>
     </div>
   </div>
 
