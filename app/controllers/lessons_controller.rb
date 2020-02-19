@@ -23,11 +23,21 @@ class LessonsController < ApplicationController
       @errorMessage = "user is no exist or your name!!"
       redirect_to "/lessons/new "
     end
+  end
 
-    def show
-    end
+  def show
+  end
 
-    def destroy
-    end
+  def destroy
+      thanksUser = User.find_by(name: params[:name])
+      # 入力されたnameをもつユーザーを取得し、outputUserに格納
+      theOutput = Input.find(params[:id])
+      # # 送られてきたparamを元にoutputを特定。
+      # if thanksUser.name == theOutput.user.name
+         theOutput.destroy
+      # else
+      #   @errorMessage = "user is no exist or your name!!"
+      #   redirect_to "/"
+      # end
   end
 end
