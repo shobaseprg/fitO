@@ -41,7 +41,7 @@
             <%= link_to "image" "#{myinput.image}" %>
         </div>
         <div class ="input_name">
-          <%= link_to "教えてもらった",  "/lessons/new" ,method: :GET %>
+          <%= link_to "教えてもらった",  "/lessons/#{myinput.id}" ,method: :PATCH %>
         </div>
     </div>    <%# "input-box">  %>
   <% end %>  <%# each %>

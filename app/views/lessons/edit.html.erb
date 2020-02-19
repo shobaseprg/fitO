@@ -1,8 +1,0 @@
-<%# lessons#edit html
-アウトプットからお礼フォーム用 %>
-教えてもらった人の名前を入力してください。（inputのユーザー名と一致する必要があります）
-<%= form_with(url:  "/lessons/#{params[:id]}", local: true, method: :PATCH, class: "") do |form| %>
-  <%= form.text_field :name, placeholder: "thanks for", class: "" %>
-  <%= form.submit "thanks", class: "" %>
-<% end %>
-<% end %>
