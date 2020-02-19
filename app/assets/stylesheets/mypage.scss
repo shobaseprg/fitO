@@ -1,0 +1,23 @@
+
+.mypage-btn{
+  background-color:gray;
+  color: white;
+}
+
+.active-btn{
+  background-color: white;
+  color: black;
+}
+
+.mypageDefault{
+  background-color: yellow;
+  height: 100vh;
+  width: 100vw;
+}
+.activeMypage{
+  display:block;
+}
+
+.mypageNonShow{
+  display:none
+}

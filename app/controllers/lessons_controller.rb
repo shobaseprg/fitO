@@ -19,6 +19,7 @@ class LessonsController < ApplicationController
     @user.output_times += 1
     @user.save
     else
+      @errorMessage = "user is no exist or your name!!"
       redirect_to "/lessons/new "
     end
   end

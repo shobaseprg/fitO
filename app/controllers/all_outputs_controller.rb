@@ -14,9 +14,9 @@ class AllOutputsController < ApplicationController
     lessonsDevs_of_1 = Lesson.where(k_or_o: 2).where(lesson_no:1)
     lessonsDevs_of_2 = Lesson.where(k_or_o: 2).where(lesson_no:2)
                     
-                    @lessonsDevs = [
-                                    lessonsDevs_of_1,
-                                    lessonsDevs_of_2
+     @lessonsDevs = [
+                    lessonsDevs_of_1,
+                    lessonsDevs_of_2
                                     ]
   end
 end
