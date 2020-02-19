@@ -1,32 +1,84 @@
-.input_wrappar{
-  height: calc(100vh - 200px);
-  background-color: pink;
+.totalInputFrame{
+  padding-top: 230px;
+  height: 100vh;
 
+}
+
+.input_wrappar{
+    width: 95vw;
+    margin: 0 auto;
+    background-color:white;
+    border:solid;
+    border-radius: 20px;
+    overflow: scroll;
+    height: calc(100% - 200px);
+
+
+
+
+.newInputBox{
+
+  width:80%;
+  border: solid;
+  margin: 0 auto;
+  margin-top:30px;
+  margin-bottom: 30px;
+  background-color: gray;
+  border-radius: 20px;
+  padding: 10px;
+
+  .inputForm{
+    width: 99%;
+    margin-top:20px;
+    font-size:20px;
+  }
+
+  .inputSend{
+    height: 50px;
+    width:300px;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-left:40%;
+  }
+}
+    
   .input-box{
     word-break: break-all;
     width:1000px;
     margin: 0 auto;
-    background-color: green;
-    margin-top :30px;
+    margin-top :20px;
+    margin-bottom: 20px;
+    border: solid;
+    padding: 10px;
+    background-color:rgba(205, 207, 202, 0.911);
     .input-title{
-      background-color:white;
       font-size: 25px;
     }
     .input_content{
+      background-color: white;
       font-size: 15px;
-      background-color: grey;
+      border: solid;
+      margin-bottom: 5px;
+      padding-left:5px;
+
     }
 
     .input_image{
-      background-color:blue;
+      background-color: white;
+
       font-size: 15px;
+      border: solid;
+      margin-bottom: 5px;
+      padding-left:5px;
     }
 
     .input_name{
-      background-color: chocolate;
+      margin-bottom: 5px;
       font-size: 15px;
-      display: flex;
-      justify-content:space-between;
+      border: solid;
+      padding-left:5px;
+      background-color: white;
+
     }
 
     .deleteOutput{

@@ -1,8 +1,11 @@
+
+<div class ="totalInputFrame">
 <div class = 'input_wrappar'>
 
   <% @inputs.each do |input| %>
     <div class= "input-box"> 
         <div class = "input-title">
+          <span>title  :   </span>
           <%= input.title %>
         </div>
 
@@ -15,12 +18,14 @@
         </div>
 
         <div class ="input_name">
-              slack:
+             <span> slack  :  </span>
             <%= input.user.slack%>
         </div>
     </div>
   <% end %>
-</div>
 
+</div>
+</div>
+inputs index html
 
 

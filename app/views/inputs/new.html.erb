@@ -1,7 +1,26 @@
-新規投稿
+<%# 新規投稿フォーム %>
+
+<div class ="totalInputFrame">
+<div class ="input_wrappar">
+<div class ="newInputBox">
+
     <%= form_with(model: @input, :url => { :controller => :inputs, :action => :create },local: true) do |form| %>
-      <%= form.text_field :title, placeholder: "title" %>
-      <%= form.text_area :content, placeholder: "content" , rows: "10" %>
-      <%= form.text_field :image, placeholder: "image" %>
-      <%= form.submit "SEND" %>
+      
+      <div>
+      <%= form.text_field :title, placeholder: "title" ,class: "inputForm"%>
+      </div>
+
+      <div>
+      <%= form.text_area :content, placeholder: "content" , rows: "20" ,class: "inputForm"%>
+      </div>
+
+      <div>
+      <%= form.text_field :image, placeholder: "image" ,class: "inputForm" %>
+      </div>
+      <div>
+      <%= form.submit "SEND" ,class:"inputSend"%>
     <% end %>
+
+</div>
+</div>
+</div>
