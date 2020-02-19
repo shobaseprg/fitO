@@ -22,7 +22,7 @@
 
         <div class = "deleteOutput">
         削除用リンク
-          <%= link_to "教えてもらった" ,"/lessons/1/inputs/#{output.id}", method: :delete%>
+          <%= link_to "教えてもらった", "/lessons/#{output.id}" ,method: :GET %>
         </div>
     </div>
   <% end %>
