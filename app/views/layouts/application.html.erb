@@ -17,9 +17,7 @@
     <header class="header ">
 
       <div class = "header__up">
-<%# オフの場合 %>
-      <%if current_user.on_off == 0%>
-        <div class = "header__up__titles">
+        <div class = header__up__titles>
             <div class="header__up__titles__title">
               <%= link_to "fitO", root_path, class: "fito" %>
             </div>
@@ -27,24 +25,9 @@
               <%= link_to "-from input to Out put-", root_path, class: "subtitle" %>
             </div>
         </div>
-<%# オンの場合 %>
-      <% else %>
-        <div class = "header__up__titles red>"
-            <div class ="header__up__titles__title">
-              <%= link_to "fitO", root_path, class: "fito" %>
-            </div>
-            <div class ="header__up__titles__subtitle">
-              <%= link_to "-from input to Out put-", root_path, class: "subtitle" %>
-            </div>
-        </div>
-      <% end %>
-        
 
         <div class = "header__up__account">
-
           <% if user_signed_in? %>
-            <div class= "account_onoff_btn on_btn">ON</div>
-            <div class= "account_onoff_btn off_btn">OFF</div>
             <%= link_to "My page", "/users/#{current_user.id}",class: "account_btn" %>
             <%= link_to "Account edit ", edit_user_registration_path, method: :get, class: "account_btn" %>
             <%= link_to "Log Out ", destroy_user_session_path, method: :delete, class: "account_btn" %>
