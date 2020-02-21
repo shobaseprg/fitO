@@ -46,8 +46,6 @@
 
 }
 
-
-
 .oka{
   height: 90%;
   background: image-url("oka.png");
@@ -56,8 +54,6 @@
   position: absolute;
   left:450px;
   top:100px;
-
-  
 }
 
 .thanksInput{
@@ -71,4 +67,31 @@ margin-top: 230px;
 
 .thanksSend{
   background-color: red;
+}
+
+.clearInputBtn{
+  margin: 0 auto;
+  background-color:yellow;
+  height: 40px;
+  width: 100px;
+  line-height: 40px;
+  border: solid;
+  border-radius: 20px;
+  text-align: center;
+  padding-right: 5px;
+}
+
+.toOutput{
+  text-align: center;
+  padding-top: 300px;
+  font-size: 50px;
+}
+
+.returnHOME{
+  background-color: red;
+  width: 300px;
+margin:0 auto;
+margin-top: 100px;
+border-radius: 30px;
+border: solid;
 }

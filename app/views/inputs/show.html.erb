@@ -17,16 +17,22 @@
             <%= link_to "image" "#{output.image}" %>
         </div>
 
-        <div class ="input_name">
-              slack:
+         <% if output.user.on_off == 0%>
+        <div class ="input_slack">
+             <span> slack  :  </span>
             <%= output.user.slack%>
         </div>
+        <% else%>
+        <div class ="input_slack_on">
+             <span> slack  :  </span>
+            <%= output.user.slack%>
+        </div>
+        <% end %>
 
         <% if user_signed_in? && current_user.id != output.user.id %>
         <%# 自分のoutputには教えてもらったは表示させない。 %>
-          <div class = "deleteOutput">
-          削除用リンク
-            <%= link_to "教えてもらった", "/lessons/#{output.id}" ,method: :GET %>
+          <div class = "deleteOutput clearInputBtn">
+            <%= link_to "thanks!!", "/lessons/#{output.id}" ,method: :GET %>
           </div>
         <% end %>
     </div>

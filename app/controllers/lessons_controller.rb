@@ -20,7 +20,6 @@ class LessonsController < ApplicationController
     @user.output_times += 1
     @user.save
     else
-      @errorMessage = "user is no exist or your name!!"
       redirect_to "/lessons/new "
     end
   end
@@ -32,13 +31,15 @@ class LessonsController < ApplicationController
       thanksUser = User.find_by(name: params[:name])
       # 入力されたnameをもつユーザーを取得し、outputUserに格納
       theOutput = Input.find(params[:id])
-      # # 送られてきたparamを元にoutputを特定。
-      if thanksUser.name == theOutput.user.name
+      # # 送られてきたparamを元にoutputを特定
+      if thanksUser && thanksUser.name == theOutput.user.name
+      # thanksUserがいてかつ、アウトプットのユーザーと一致した場合。
         thanksUser.output_times += 1
         thanksUser.save
-         theOutput.destroy
+        theOutput.destroy
       else
         redirect_to  "/lessons/#{params[:id]}" ,method: :GET
       end
+
   end
 end

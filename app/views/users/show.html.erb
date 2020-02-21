@@ -42,8 +42,8 @@
         <div class ="input_image">
             <%= link_to "image" "#{myinput.image}" %>
         </div>
-        <div class ="input_name">
-          <%= link_to "教えてもらった",  "/lessons/#{myinput.id}" ,method: :PATCH %>
+        <div class ="clearInputBtn">
+          <%= link_to "Clear Input",  "/lessons/#{myinput.id}" ,method: :PATCH %>
         </div>
     </div>    <%# "input-box">  %>
   <% end %>  <%# each %>
