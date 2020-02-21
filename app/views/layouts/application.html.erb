@@ -15,8 +15,9 @@
 
 <div class = "wrapper">
     <header class="header ">
-
+     
       <div class = "header__up">
+
         <div class = header__up__titles>
             <div class="header__up__titles__title">
               <%= link_to "fitO", root_path, class: "fito" %>
@@ -25,6 +26,7 @@
               <%= link_to "-from input to Out put-", root_path, class: "subtitle" %>
             </div>
         </div>
+
 
         <div class = "header__up__account">
           <% if user_signed_in? %>
