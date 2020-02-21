@@ -1,5 +1,7 @@
 <%# users#show.html
 マイページ表示用 %>
+<div class= "mypageWrapper">
+</div>
 
 <%# ----------------------------------------------------------- %>
 <div class = "btn-frame">
@@ -17,7 +19,7 @@
 
 
 <%#  マイページインプット------------------------------------------- %>
-<div class = 'input_wrappar mypageInput mypageNonShow '>
+<div class = 'my_input_wrappar mypageInput mypageNonShow '>
   <% @myinputs.each do |myinput| %>
     <div class= "input-box"> 
         <div class = "input-title">
@@ -46,9 +48,11 @@
     </div>    <%# "input-box">  %>
   <% end %>  <%# each %>
 </div><%# 'input_wrappar'> %>
+<footer>
+</footer>
 
 <%#  マイページアウトプット------------------------------------------- %>
-<div class = 'input_wrappar mypageOutput mypageNonShow'>
+<div class = 'my_input_wrappar mypageOutput mypageNonShow'>
   <% @myoutputs .each do |myoutput| %>
     <div class= "input-box"> 
         <div class = "input-title">
@@ -73,4 +77,6 @@
   <% end %><%# each %>
 </div><%# 'input_wrappar'> %>
 
+<footer>
+</footer>
 

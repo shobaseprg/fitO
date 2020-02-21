@@ -67,11 +67,15 @@
 
 // レッスンボックス形用
 .lessonsBoxform{
-  width: 95vw;
+  position: absolute;
+  top:350px;
+  right: 100px;
+  left: 100px;
+  bottom: 100px;
   background-color:white;
-  margin:0 auto;
   border:solid;
   border-radius: 20px;
+  overflow: scroll;
   } 
 
 // レッスン初期非表示用

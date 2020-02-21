@@ -1,9 +1,17 @@
 <%# lessons#new html
-お礼フォーム用 %>
+アウトプットからのお礼フォーム用 %>
+<div class = "input_wrappar thanksForm">
+<div class ="oka">
+<div class = "thanksInput">
 
-名前はoutputと一致
 <%= form_with(url:  "/lessons/#{params[:id]}", local: true, method: :DELETE, class: "") do |form| %>
-  <%= form.text_field :name, placeholder: "thanks for", class: "" %>
-  <%= form.submit "thanks", class: "" %>
+  <%= form.text_field :name, placeholder: "Enter Name   ※ Output user name", class: "thanksNameBox" %>
+  <%= form.submit "thanks", class: "thanksSend" %>
 <% end %>
 
+</div>
+</div>
+</div>
+
+<footer>
+</footer>

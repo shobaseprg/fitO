@@ -1,9 +1,41 @@
+.diviseTop{
+  height: 300px;
+  width: 100vh;
+}
+
+#user_name{
+  width: 900px;
+}
+
+#user_period{
+  width: 900px;
+}
+
+#user_slack{
+  width: 900px;
+}
+
+#user_email{
+  width: 900px;
+}
+
+#user_password{
+  width: 900px;
+}
+
+#user_password_confirmation{
+  width: 900px;
+}
+
+.actions{
+  margin:0 auto;
+}
+
 .devise_format{
   border: solid;
   background-color:white;
-  width: 300px;
+  width: 900px;
   margin: 0 auto;
-  margin-top:300px;
   padding: 10px;
   font-size: 20px;
   border-radius: 20px;
@@ -28,4 +60,28 @@
     line-height: 70px;
     background-color:black;
    }
+
+   
+}
+
+footer{
+  height: 70px;
+  z-index: 1;
+  margin: 0 auto;
+  position: fixed;
+  position: absolute;
+  bottom:10px;
+  left:10px;
+  right: 10px;
+  border-radius: 20px;
+  border:solid;
+  display: flex;
+  justify-content: center;
+}
+
+.footerBtn{
+  border:solid;
+  margin-top: 10px;
+  background-color: red;
+  border-color:yellow;
 }
