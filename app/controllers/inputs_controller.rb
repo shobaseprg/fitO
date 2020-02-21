@@ -3,8 +3,6 @@ class InputsController < ApplicationController
   def index
     # @inputsにall_outputs#indexから送られてきた lesson_idと一致するinputからインプットを格納する。
     @inputs = Input.where(lesson_id: params[:lesson_id]).where(input_or_output: 1)
-
-
   end
 
   def show

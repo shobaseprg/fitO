@@ -71,12 +71,23 @@
       padding-left:5px;
     }
 
-    .input_name{
+    .input_slack{
       margin-bottom: 5px;
       font-size: 15px;
       border: solid;
       padding-left:5px;
       background-color: white;
+    }
+
+    .input_slack_on{
+      margin-bottom: 5px;
+      color: white;
+      font-size: 15px;
+      border: solid;
+      border-color: black;
+      padding-left:5px;
+      background-color:red;
+      font-size: 20px;
     }
 
     .deleteOutput{
