@@ -15,6 +15,8 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.2]
       t.string :team,                null: false, default: ""
       t.integer :output_times, default: "0"    
       t.integer :rank
+      t.integer :on_off ,default: "0" 
+      t.integer :night_short,default:"0"
 
       ## Recoverable
       t.string   :reset_password_token
