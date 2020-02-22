@@ -1,6 +1,5 @@
 class LessonsController < ApplicationController
 
-  before_action :move_to_index
   
   def  update
     # インプットをアウトプットに移行させる
@@ -45,8 +44,5 @@ class LessonsController < ApplicationController
 
   end
 
-  def move_to_index
-    redirect_to action: :index unless user_signed_in?
-  end
-  
+
 end

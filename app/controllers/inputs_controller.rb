@@ -1,6 +1,6 @@
 class InputsController < ApplicationController
 
-  before_action :move_to_index
+
   
   def index
     # @inputsにall_outputs#indexから送られてきた lesson_idと一致するinputからインプットを格納する。
@@ -31,8 +31,5 @@ class InputsController < ApplicationController
 
     end
 
-    def move_to_index
-      redirect_to action: :index unless user_signed_in?
-    end
 
   end

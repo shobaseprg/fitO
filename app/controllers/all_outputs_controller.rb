@@ -1,7 +1,5 @@
 class AllOutputsController < ApplicationController
   
-  before_action :move_to_index
-  
   def index
     lessonsBases_of_1 = Lesson.where(k_or_o: 1).where(lesson_no:1)
     lessonsBases_of_2 = Lesson.where(k_or_o: 1).where(lesson_no:2)
@@ -32,7 +30,5 @@ class AllOutputsController < ApplicationController
                                     ]
   end
 
-  def move_to_index
-    redirect_to action: :index unless user_signed_in?
-  end
+
 end
