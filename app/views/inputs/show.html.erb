@@ -1,4 +1,17 @@
-<%# アウトプット一覧表示用 %>
+<%# 投稿アウトプット一覧表示用 %>
+<div class="hintBox">
+  <div class="hintClose">
+    close
+  </div>
+    <div class= "hintContnet">
+      <p>・アウトプット掲示板です</p>
+      <p>・この掲示板の投稿は、すでに解決済の投稿です。</p>
+      <p>・スラックを通じて連絡をとり、教えてもらったらthanks!!ボタンを押しましょう</p>
+      <p>・遷移する画面で、教えてもらった方の名前を入力しましょう。</p>
+    </div>
+</div>
+
+<div class ="totalInputFrame">
 <div class = 'input_wrappar'>
 
   <% @outputs.each do |output| %>
@@ -12,30 +25,47 @@
         </div>
 
         <div class ="input_image">
-            <%= link_to "image" "#{output.image}" %>
+          <%= link_to "image" "#{output.image}" %>
         </div>
 
-        <div class ="input_name">
-              slack:
+        <% if output.user.on_off == 0%>
+        <%# 投稿者が欠席なら色つかない %>
+          <div class ="input_slack">
+            <span> slack  :  </span>
             <%= output.user.slack%>
-        </div>
+          </div>
+          <% else%>
+          <div class ="input_slack_on">
+          <%# 投稿者が出席なら赤く色つく %>
+            <span> slack  :  </span>
+            <%= output.user.slack%>
+          </div>
+        <% end %>
 
         <% if user_signed_in? && current_user.id != output.user.id %>
-        <%# 自分のoutputには教えてもらったは表示させない。 %>
-          <div class = "deleteOutput">
-          削除用リンク
-            <%= link_to "教えてもらった", "/lessons/#{output.id}" ,method: :GET %>
+        <%# 自分のoutputには【thanks】は表示させない。 %>
+        <%# カレントユーザーとアウトプットユーザーが異なる時だけ通る %>
+          <div class = "deleteOutput clearInputBtn">
+            <%= link_to "thanks!!", "/lessons/#{output.id}" ,method: :GET %>
           </div>
         <% end %>
     </div>
   <% end %>
 </div>
+</div>
 
-  <div class = 'input__footer'>
-    <div class = 'input__footer__btn'>
-    <%# @lesson_id は showコントローラで定義している  %>
-      <%= link_to "create input" ,"/lessons/#{@lesson_id}/inputs/new" %>
-      <%# 同一項目に新しいinputを作成する。 %>
-    </div>
+<footer>
+  <div class="account_btn footerBtnReturn homeBtn">
+    <%= link_to " home","/" %>  
   </div>
+  <div class="account_btn footerBtnReturn hintBtn">
+  hint
+  </div>
+  <div class="account_btn footerBtnReturn reBtn">
+  <%= link_to " return","/all_outputs" %>  
+  </div>
+      <%# @lesson_id は inputs#showコントローラで定義している  %>
+        <%= link_to "create input" ,"/lessons/#{@lesson_id}/inputs/new",class: "account_btn footerBtn" %>
+        <%# 同一項目に新しいinputを作成する。 %>
+</footer>
 

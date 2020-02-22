@@ -11,69 +11,81 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+<body>
 
-  <div class = "wrapper">
+<div class = "wrapper">
+    <header class="header ">
 
-    <header class="header">
-    <div class = "header__up">
-      <div class = header__up__titles>
-          <div class="header__up__titles__title">
-            <%= link_to "fitO", root_path, class: "fito" %>
-          </div>
-          <div class ="header__up__titles__subtitle">
-            <%= link_to "-from input to Out put-", root_path, class: "subtitle" %>
-          </div>
+      <div class = "header__up">
+        <div class = header__up__titles>
+            <div class="header__up__titles__title">
+              <%= link_to "fitO", root_path, class: "fito" %>
+            </div>
+            <div class ="header__up__titles__subtitle">
+              <%= link_to "-from input to Out put-", root_path, class: "subtitle" %>
+            </div>
+        </div>
+
+        <div class = "header__up__account">
+          <% if user_signed_in? %>
+            
+            <%if current_user.on_off ==0%>
+            <%# スイッチオフの場合 %>
+              <%= link_to "OFF", "/users/#{current_user.id}",method: :PATCH,class: "account_btn offBtn" %>
+              <% else%>
+            <%# スイッチオンの場合 %>
+              <%= link_to "ON", "/users/#{current_user.id}",method: :PATCH,class: "account_btn onBtn" %>
+            <% end %>
+            <%# 常時表示 %>
+              <%= link_to "My page", "/users/#{current_user.id}",class: "account_btn" %>
+              <%= link_to "Account edit ", edit_user_registration_path, method: :get, class: "account_btn" %>
+              <%= link_to "Log Out ", destroy_user_session_path, method: :delete, class: "account_btn" %>
+            <% else %>
+            <%# ログアウト時 %>
+            <%= link_to "log in", new_user_session_path, class: "account_btn" %>
+            <%= link_to "create", new_user_registration_path, class: "account_btn" %>
+          <% end %>
+        </div>
       </div>
 
-      <div class = "header__up__account">
-        <% if user_signed_in? %>
-          <%= link_to "マイページ", "/users/#{current_user.id}",class: "account_btn" %>
-          <%= link_to "account edit ", edit_user_registration_path, method: :get, class: "account_btn" %>
-          <%= link_to "log Out ", destroy_user_session_path, method: :delete, class: "account_btn" %>
-        <% else %>
-          <%= link_to "log in", new_user_session_path, class: "account_btn" %>
-          <%= link_to "create account", new_user_registration_path, class: "account_btn" %>
-        <% end %>
-      </div>
-    </div>
-
- <% if user_signed_in? %>
+    <% if user_signed_in? %>
     <div class ="infomation">
       <div class = "infomation__my-data">
+        my_data => {name:
+        <span>
         <%=  current_user.name%>
-        = {
-        my output times  :
+        </span>
+        , my_output_times  :
         <%=  current_user.output_times%>
         }
       </div>
 
       <div class = "infomation__ranking">
-          ranking  =[
         <% rank_users = User.order(output_times: "DESC").limit(3)%>
+        <%# 回数上位３名を取得している %>
         <% rank = 1%>
-        <% rank_users.each do |rank_user|%>
-          {rank:
-          <%= rank%>
-          ,name:
-          <%= rank_user.name%>
-          ,period:
-          <%= rank_user.period%>
-          ,times:
-        <%= rank_user.output_times%>
-          },
-        <% rank += 1%>
-
-        <% end %> 
-          ];
-      </div>
-
-   <% end %>
-    
-    </div>
+          <% rank_users.each do |rank_user|%>
+          <div>
+            rank
+            <%= rank%>
+            => {name:
+            <%= rank_user.name%>
+            , period:
+            <%= rank_user.period%>
+            , times:
+            <%= rank_user.output_times%>
+            }
+            <% rank += 1%>
+          <% end %> 
+            
+        </div>
+    <% end %>
 
     </header>
-    <%= yield %>
-  </div>
-  </body>
+     
+         <div class="main">
+          <%= yield %>
+         </div>
+</div>
+</body>
 </html>

@@ -1,8 +1,22 @@
+<div class="hintBox">
+  <div class="hintClose">
+    close
+  </div>
+    <div class= "hintContnet">
+      <p>インプット掲示板です</p>
+      <p>・アウトプットしたい人は、インプット一覧から、自分がアウトプットしたい投稿をみつけて、スラックを通じて投稿者に連絡</p>
+          をとりましょう。</p>
+    </div>
+</div>
+
+<div class ="totalInputFrame">
 <div class = 'input_wrappar'>
 
+<%# インプット一覧を表示 %>
   <% @inputs.each do |input| %>
     <div class= "input-box"> 
         <div class = "input-title">
+          <span>title  :   </span>
           <%= input.title %>
         </div>
 
@@ -11,16 +25,38 @@
         </div>
 
         <div class ="input_image">
-            <%= link_to "image" "#{input.image}" %>
+          <%= link_to "image" "#{input.image}" %>
         </div>
 
-        <div class ="input_name">
-              slack:
-            <%= input.user.slack%>
-        </div>
-    </div>
+        <% if input.user.on_off == 0%>
+          <%# ユーザーが出席していない場合 %>
+            <div class ="input_slack">
+              <span> slack  :  </span>
+              <%= input.user.slack%>
+            </div>
+          <% else%>
+          <%# ユーザーが出席している場合 %>
+          <div class ="input_slack_on">
+            <span> slack  :  </span>
+              <%= input.user.slack%>
+          </div>
+        <% end %>
+      </div>
   <% end %>
+
+</div>
 </div>
 
+<footer>
+  <div class="account_btn footerBtnReturn homeBtn">
+    <%= link_to " home","/" %>  
+  </div>
+  <div class="account_btn footerBtnReturn hintBtn">
+    hint
+  </div>
+  <div class="account_btn footerBtnReturn reBtn">
+    <%= link_to " return","/all_outputs" %>  
+  </div>
+</footer>
 
 

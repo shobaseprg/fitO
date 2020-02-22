@@ -1,4 +1,19 @@
 
+.mypageWrapper{
+  padding-top:230px;
+  }
+
+.my_input_wrappar{
+  position: absolute;
+  top:290px;
+  right: 100px;
+  left: 100px;
+  bottom: 100px;
+  background-color:rgba(255, 255, 255,0.7);
+  border:solid;
+  border-radius: 20px;
+  overflow: scroll;
+}
 .mypage-btn{
   background-color:gray;
   color: white;
@@ -10,15 +25,70 @@
 }
 
 .mypageDefault{
-  background-color: yellow;
   height: 100vh;
   width: 100vw;
 }
 
 .activeMypage{
   display:block;
+  height: 1000px;
 }
 
 .mypageNonShow{
   display:none
+}
+
+.thanksForm{
+  font-size: 30px;
+
+}
+
+.oka{
+  height: 90%;
+  background: image-url("oka.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  left:450px;
+  top:100px;
+}
+
+.thanksInput{
+margin-top: 230px;
+  border: solid;
+}
+
+.thanksNameBox{
+  width:900px;
+}
+
+.thanksSend{
+  background-color: red;
+}
+
+.clearInputBtn{
+  margin: 0 auto;
+  padding-left: 30px;
+  background-color:yellow;
+  height: 40px;
+  width: 100px;
+  line-height: 40px;
+  border: solid;
+  border-radius: 20px;
+  padding-right: 5px;
+}
+
+.toOutput{
+  text-align: center;
+  padding-top: 300px;
+  font-size: 50px;
+}
+
+.returnHOME{
+  background-color: red;
+  width: 300px;
+margin:0 auto;
+margin-top: 100px;
+border-radius: 30px;
+border: solid;
 }

@@ -1,30 +1,42 @@
+<div class="hintBox">
+  <div class="hintClose">
+  close
+  </div>
+    <div class= "hintContnet">
+      <p>・出席したらヘッダーの【ON】を押しましょう。</p>
+      <p>・インプットしたい方は、まずアウトプット一覧を確認して、同様のアウトプットがなかったら、inputを投稿しましょう。</p>
+      <p>・もしアウトプット一覧に自分の疑問点と同様の投稿があれば、スラックを通じて投稿者に連絡をとりましょう。</p>
+      <p>・アウトプットしたい人は、インプット一覧から、自分がアウトプットしたい投稿をみつけて、スラックを通じて投稿者に連絡をとりましょう。</p>
+    </div>
+</div>
+
 <div class = "sellect-lesson-wrapper">
 
-<%# ファーストボタン %>
-  <div class = "btn-frame">
-    <div class = "first-btn btn">
-    input
-    </div>
-    <div class = "first-btn btn">
-    output
-    </div>
-  </div>
-
-<div class= "second-btnsss">
-  <%# セカンドボタンインプット %>
-  <div class= "secondBtns " >
-      <div class = " btn-frame ">      <%# ボタン二つの枠組みようクラス %>
-          <div class = "secondBtn btn ">
-            input of base
-          </div>                   
-          <div class = "secondBtn btn ">
-            input of development
-          </div>
+  <%# ファーストボタン %>
+    <div class = "btn-frame">
+      <div class = "first-btn btn">
+        input
       </div>
-  </div>
+      <div class = "first-btn btn">
+        Output
+      </div>
+    </div>
 
-<%# セカンドボタンアウトプット %>
-  <div class= "secondBtns " >
+  <div class= "second-btnsss">
+    <%# セカンドボタンインプット %>
+    <div class= "secondBtns " >
+      <div class = " btn-frame ">      <%# ボタン二つの枠組みようクラス %>
+        <div class = "secondBtn btn ">
+          input of base
+        </div>                   
+        <div class = "secondBtn btn ">
+          input of development
+        </div>
+      </div>
+    </div>
+
+  <%# セカンドボタンアウトプット %>
+    <div class= "secondBtns " >
       <div class = "btn-frame">
         <div class = "secondBtn btn ">
           Output of base
@@ -33,104 +45,79 @@
           Output of development
         </div>
       </div>
+    </div>
   </div>
-</div>
 
 <%# レッスンデフォルト表示用 %>
 <div class = "defultLesson active-defult-lesson">
-  <div class ="lessonsBoxform">
-  defult
+  <div class ="lessonsBoxform_def">
   </div>
 </div>
 
 
   <%# インププット  基礎 %>
   <div class ="lessonsAllBox lessonsBoxform" >
-    <div>INPUT → BASE</div>
+      <div class="midleTitle">
+        INPUT of BASE
+      </div>
+      <% num = 1 %>
+        <%  @lessonsBases.each do|lessons|%>
+            <%= render partial: "lessonPart", locals: { lessons: lessons ,num:num,input_or_output:1} %>
+            <%# 部分テンプレート呼び出し %>
+            <% num += 1%>
+        <% end %>
+  </div>
 
-             <% num = 1 %>
-              <%  @lessonsBases.each do|lessons|%>
-                lesson :
-                <%= num%>
-                <% lessons.each do|lesson|%>
-                    <div><%= link_to " # #{lesson.title}","/lessons/#{lesson.id}/inputs" %></div>
-                    
-                    <% inputLength = lesson.inputs.where(input_or_output:1) %>
-                    <%= inputLength.length%>
-                <% end%>
-                <% num += 1%>
-              <% end %>
-            </div>
-          </div>
-    </div>
-
-
-<%# インプット  応用 %>
+  <%# インプット  応用 %>
   <div class ="lessonsAllBox lessonsBoxform" >
-    <div>INPUT → DEVELOPMENT</div>
-    
-<% num = 1 %>
-              <% @lessonsDevs.each do|lessons|%>
-                lesson :
-                <%= num%>
-                <% lessons.each do|lesson|%>
-                <div><%= link_to " # #{lesson.title}","/lessons/#{lesson.id}/inputs" %></div>
-              
-                 <% inputLength = lesson.inputs.where(input_or_output:1) %>
-                 <%= inputLength.length%>
-
-                <% end%>
-                <% num += 1%>
-              <% end %>
-            </div>
-          </div>
+    <div class="midleTitle">
+      INPUT of DEVELOPMENT
     </div>
+      <% num = 1 %>
+        <% @lessonsDevs.each do|lessons|%>
+            <%= render partial: "lessonPart", locals: { lessons: lessons ,num:num,input_or_output:1} %>
+            <%# 部分テンプレート呼び出し %>
+            <% num += 1%>
+          <% end %>
+  </div>
 
 
-<%# アウトプット　基礎 %>
+  <%# アウトプット　基礎 %>
   <div class ="lessonsAllBox lessonsBoxform" >
-    <div>OUTPUT → DEVELOPMENT
-    
-<% num = 1 %>
-              <%  @lessonsBases.each do|lessons|%>
-                lesson :
-                <%= num%>
-                <% lessons.each do|lesson|%>
-                <div><%= link_to " # #{lesson.title}","/lessons/#{lesson.id}/inputs/1" %></div>
-                <%# 行き先：input#show (アウトプット一覧を表示する) %>
-              
-                  <% inputLength = lesson.inputs.where(input_or_output:2) %>
-                 <%= inputLength.length%>
-
-                <% end%>
-                <% num += 1%>
-              <% end %>
-            </div>
-          </div>
+    <div class="midleTitle">
+      OUTPUT → BESE
     </div>
+      <% num = 1 %>
+        <%  @lessonsBases.each do|lessons|%>
+          <%= render partial: "lessonPart", locals: { lessons: lessons ,num:num,input_or_output:2} %>
+          <%# 部分テンプレート呼び出し %>
+          <% num += 1%>
+        <% end %>
+  </div>
+  
 
 
 <%# アウトプット応用 %>
 <div class ="lessonsAllBox lessonsBoxform" >
-    <div>OUTPUT → DEVELOPMENT
-    
-<% num = 1 %>
-              <%  @lessonsDevs.each do|lessons|%>
-                lesson :
-                <%= num%>
-                <% lessons.each do|lesson|%>
-                <div><%= link_to " # #{lesson.title}","/lessons/#{lesson.id}/inputs/1" %></div>
-                 
-                 <% inputLength = lesson.inputs.where(input_or_output:2) %>                 
-                 <%= inputLength.length%>
+  <div class="midleTitle">OUTPUT → DEVELOPMENT
+  </div>
+    <% num = 1 %>
+      <%  @lessonsDevs.each do|lessons|%>
+        <%= render partial: "lessonPart", locals: { lessons: lessons ,num:num,input_or_output:2} %>
+        <%# 部分テンプレート呼び出し %>
+        <% num += 1%>
+      <% end %>
+</div>
 
-                <% end%>
-                <% num += 1%>
-              <% end %>
-            </div>
-          </div>
-    </div>
-
-
-
-</div> 
+<%# フッター　ホーム　ヒント　リターン %>
+<footer>
+  <div class="account_btn footerBtnReturn homeBtn">
+    <%= link_to " home","/" %>  
+  </div>
+  <div class="account_btn footerBtnReturn hintBtn">
+    hint
+  </div>
+  <div class="account_btn footerBtnReturn reBtn">
+    <%= link_to " return","/all_outputs" %>  
+  </div>
+</footer>

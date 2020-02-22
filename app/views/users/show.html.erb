@@ -1,6 +1,26 @@
 <%# users#show.html
 マイページ表示用 %>
 
+<div class="hintBox">
+  <div class="hintClose">
+  close
+  </div>
+    <div class= "hintContnet">
+      <p>・マイページです。自分の投稿が見れます。</p>
+      <p>・インプット掲示板について</p>
+      <p>・インプットについて教えてもらったらclear inputボタンを押しましょう。</p>
+      <p>・遷移する画面で、教えてもらった方の名前を入力しましょう。</p>
+      <p>・あなたの、インプットはアウトプット掲示板に掲載されるので、今度は誰かに教えてあげましょう。</p>
+      <p>・アウトプット掲示板について</p>
+      <p>・アウトプット掲示板はあなたの解決済の投稿です。</p>
+      <p>・連絡をとってきた方がいましたら教えてあげましょう。</p>
+      <p>・教えてあげた方が、thanksボタンを押したら、投稿は消去されます。（自分で消去することはできません）</p>
+    </div>
+</div>
+
+<div class= "mypageWrapper">
+</div>
+
 <%# ----------------------------------------------------------- %>
 <div class = "btn-frame">
     <div class = "mypage-btn  mypageInputBtn btn">
@@ -17,9 +37,9 @@
 
 
 <%#  マイページインプット------------------------------------------- %>
-<div class = 'input_wrappar mypageInput mypageNonShow '>
+<div class = 'my_input_wrappar mypageInput mypageNonShow '>
   <% @myinputs.each do |myinput| %>
-    <div class= "input-box"> 
+   <div class= "input-box"> 
         <div class = "input-title">
           <%= myinput.title %>
           
@@ -40,15 +60,18 @@
         <div class ="input_image">
             <%= link_to "image" "#{myinput.image}" %>
         </div>
-        <div class ="input_name">
-          <%= link_to "教えてもらった",  "/lessons/#{myinput.id}" ,method: :PATCH %>
+        <div class ="clearInputBtn">
+          <%= link_to "Clear Input",  "/lessons/#{myinput.id}" ,method: :PATCH %>
         </div>
     </div>    <%# "input-box">  %>
+
   <% end %>  <%# each %>
 </div><%# 'input_wrappar'> %>
+<footer>
+</footer>
 
 <%#  マイページアウトプット------------------------------------------- %>
-<div class = 'input_wrappar mypageOutput mypageNonShow'>
+<div class = 'my_input_wrappar mypageOutput mypageNonShow'>
   <% @myoutputs .each do |myoutput| %>
     <div class= "input-box"> 
         <div class = "input-title">
@@ -73,4 +96,15 @@
   <% end %><%# each %>
 </div><%# 'input_wrappar'> %>
 
+<footer>
+<div class="account_btn footerBtnReturn homeBtn">
+    <%= link_to " home","/" %>  
+  </div>
+<div class="account_btn footerBtnReturn hintBtn">
+hint
+</div>
+<div class="account_btn footerBtnReturn">
+retrun
+</div>
+</footer>
 

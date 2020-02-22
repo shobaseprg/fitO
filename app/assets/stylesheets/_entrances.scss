@@ -1,22 +1,88 @@
+.diviseTop{
+  height: 300px;
+  width: 100vh;
+}
+
+#user_name{
+  width: 900px;
+}
+
+#user_period{
+  width: 900px;
+}
+
+#user_slack{
+  width: 900px;
+}
+
+#user_email{
+  width: 900px;
+}
+
+#user_password{
+  width: 900px;
+}
+
+#user_password_confirmation{
+  width: 900px;
+}
+
+.actions{
+  margin:0 auto;
+}
+
 .devise_format{
-  background-color: brown;
-  width: 300px;
+  border: solid;
+  background-color:white;
+  width: 900px;
   margin: 0 auto;
   padding: 10px;
+  font-size: 20px;
+  border-radius: 20px;
 }
 
 .content{
   height: 100%;
   width: 100%;
-  padding-top: 200px;
-  a{
-    text-align: center;
-    margin: 0 auto;
-    display: block;
+  padding-top: 300px;
+  .startBtn{ 
+    a{color:gray;}
+    margin:200px auto;
+    border-radius: 20px;
+    background: linear-gradient(90deg,blue,black);
     height: 70px;
     width: 300px;
-    background-color:green;
     font-size: 40px;
-    color: white;
+    text-align: center;
+    line-height: 70px;
+    border: solid;
+    border-color: gray;
+   }
 }
+
+footer{
+  height: 70px;
+  z-index: 1;
+  margin: 0 auto;
+  position: fixed;
+  position: absolute;
+  bottom:10px;
+  left:10px;
+  right: 10px;
+  display: flex;
+  justify-content: center;
 }
+
+.footerBtn{
+  border:solid;
+  margin-top: 10px;
+  background-color: red;
+  border-color:yellow;
+}
+
+.footerBtnReturn{
+  border:solid;
+  margin-top: 10px;
+  border-color:gray;
+}
+

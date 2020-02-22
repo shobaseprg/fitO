@@ -1,14 +1,14 @@
 .sellect-lesson-wrapper{
- 
+ padding-top: 230px;
 }
 
 // ボタン二つの枠組み用
   .btn-frame{
     height: 50px;
     width: 100%;
-    background-color: blue;
     display: flex;
     justify-content: center;
+    margin-bottom: 10px;
   }
 
   // ボタン一個一個の形
@@ -18,17 +18,21 @@
       margin: 5px 5px;
       text-align: center;
       line-height: 40px;
+      border-radius: 10px;
   }
   
 // ファーストボタン用
 .first-btn{
   background-color:black;
   color: white;
+  border: solid;
+  border-color: black;
 }
 // ファーストボタンアクティブ用
 .active-btn{
   background-color: white;
   color: black;
+  border: solid;
 }
 
 // セカンドボタンデフォルト非表示用
@@ -40,6 +44,7 @@
 .secondBtn{
   background-color: white;
   color: black;
+  border: solid;
 }
 
 // セカンドボタン表示用
@@ -54,6 +59,9 @@
 //  デフォルト表示用
 .active-defult-lesson{
   display: block;
+  font-size: 50px;
+  padding-top: 600px;
+  text-align: center;
 }
 
 // デフォルト非表示用
@@ -61,13 +69,23 @@
   display: none;
 }
 
+.lessonsBoxform_def{
+
+  } 
+
+
 // レッスンボックス形用
 .lessonsBoxform{
-  width: 95vw;
-  height:100vh;
-  background-color:yellow;
-  margin: 0 auto;
-}
+  position: absolute;
+  top:350px;
+  right: 100px;
+  left: 100px;
+  bottom: 100px;
+  background-color:rgba(255, 255, 255,0.7);
+  border:solid;
+  border-radius: 20px;
+  overflow: scroll;
+  } 
 
 // レッスン初期非表示用
 .lessonsAllBox{
@@ -79,4 +97,28 @@
   display:block;
 }
 
+.midleTitle{
+  font-size: 50px;
+  text-align: center;
+}
 
+.oneLessonBox{
+  border:solid;
+  width: 80%;
+  margin: 10px auto 10px;
+  background-color:rgb(195, 196, 186);
+  border-radius: 10px;
+}
+
+.lessonNumber{
+  font-size: 30px;
+  background-color: black;
+  color: white;
+  padding-left: 20px;
+}
+
+.titleOfLesson{
+  margin-bottom: 5px;
+  margin-top: 5px;
+  font-size: 20px;
+}
