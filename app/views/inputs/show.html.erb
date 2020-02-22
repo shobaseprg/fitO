@@ -1,7 +1,7 @@
 <%# 投稿アウトプット一覧表示用 %>
 <div class="hintBox">
   <div class="hintClose">
-  close
+    close
   </div>
     <div class= "hintContnet">
       <p>・アウトプット掲示板です</p>
@@ -25,19 +25,19 @@
         </div>
 
         <div class ="input_image">
-            <%= link_to "image" "#{output.image}" %>
+          <%= link_to "image" "#{output.image}" %>
         </div>
 
-         <% if output.user.on_off == 0%>
-        <div class ="input_slack">
-             <span> slack  :  </span>
+        <% if output.user.on_off == 0%>
+          <div class ="input_slack">
+            <span> slack  :  </span>
             <%= output.user.slack%>
-        </div>
-        <% else%>
-        <div class ="input_slack_on">
-             <span> slack  :  </span>
+          </div>
+          <% else%>
+          <div class ="input_slack_on">
+            <span> slack  :  </span>
             <%= output.user.slack%>
-        </div>
+          </div>
         <% end %>
 
         <% if user_signed_in? && current_user.id != output.user.id %>
@@ -52,14 +52,17 @@
 </div>
 
 <footer>
-<div class="account_btn footerBtnReturn hintBtn">
-hint
-</div>
-<div class="account_btn footerBtnReturn reBtn">
-retrun
-</div>
-    <%# @lesson_id は showコントローラで定義している  %>
-      <%= link_to "create input" ,"/lessons/#{@lesson_id}/inputs/new",class: "account_btn footerBtn" %>
-      <%# 同一項目に新しいinputを作成する。 %>
+  <div class="account_btn footerBtnReturn homeBtn">
+    <%= link_to " home","/" %>  
+  </div>
+  <div class="account_btn footerBtnReturn hintBtn">
+  hint
+  </div>
+  <div class="account_btn footerBtnReturn reBtn">
+  <%= link_to " return","/all_outputs" %>  
+  </div>
+      <%# @lesson_id は showコントローラで定義している  %>
+        <%= link_to "create input" ,"/lessons/#{@lesson_id}/inputs/new",class: "account_btn footerBtn" %>
+        <%# 同一項目に新しいinputを作成する。 %>
 </footer>
 
