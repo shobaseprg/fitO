@@ -4,12 +4,15 @@
 @import "inputs";
 @import "mypage";
 @import "users";
+@import "lessons";
 
 .wrapper{
   height: 100vh;
   width: 100vw;
   box-sizing: border-box;
   position: relative;
+  background: image-url("sea.jpg");
+  background-size:cover;
 
 a{
   text-decoration: none;
@@ -26,7 +29,8 @@ a{
     &__titles{
       a{color:white}
       border: solid;
-      border-color: white;
+      background: linear-gradient(90deg,blue,black);
+      border-color:gray;
       border-radius: 20px;
       align-items: center;
       margin: 10px 10px;
@@ -62,6 +66,7 @@ a{
 
   .infomation{
     background: linear-gradient(90deg,white,black);
+    opacity: 0.8;
     width: 98%;
     text-align: right;
     color:white;

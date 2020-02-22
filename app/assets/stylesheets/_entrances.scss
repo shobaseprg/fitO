@@ -42,25 +42,22 @@
 }
 
 .content{
-  background: image-url("te.jpg");
-  background-size:cover;
   height: 100%;
   width: 100%;
   padding-top: 300px;
   .startBtn{ 
-    a{color: white;}
+    a{color:gray;}
     margin:200px auto;
-    border: solid;
     border-radius: 20px;
-    background: linear-gradient(90deg,black,white);
+    background: linear-gradient(90deg,blue,black);
     height: 70px;
     width: 300px;
     font-size: 40px;
     text-align: center;
     line-height: 70px;
-    background-color:gray;
+    border: solid;
+    border-color: gray;
    }
-
 }
 
 footer{
@@ -72,11 +69,8 @@ footer{
   bottom:10px;
   left:10px;
   right: 10px;
-  border-radius: 20px;
-  border:solid;
   display: flex;
   justify-content: center;
-  background-color: white;
 }
 
 .footerBtn{
