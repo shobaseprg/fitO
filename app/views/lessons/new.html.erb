@@ -6,8 +6,8 @@
 <div class= "thanksInput">
 
 
-  <%= form_with(url:  "/lessons", local: true, method: :POST, class: "inputName") do |form| %>
-  <%= form.text_field :name, placeholder: "Enter Name   ※ not my name", class: "thanksNameBox"  ,id:"namee"%>
+  <%= form_with(url:  "/lessons", local: true, method: :POST, class: "") do |form| %>
+  <%= form.text_field :name, placeholder: "Enter Name   ※ not my name", class: "thanksNameBox" %>
   <%= form.submit "thanks", class: "thanksSend" %>
   <% end %>
 
