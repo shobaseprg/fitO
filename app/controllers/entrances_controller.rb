@@ -1,8 +1,6 @@
 class EntrancesController < ApplicationController
  
   before_action :move_to_index
-  
-  end
 
   def index
   end
