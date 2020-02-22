@@ -37,6 +37,7 @@ class LessonsController < ApplicationController
         thanksUser.output_times += 1
         thanksUser.save
         theOutput.destroy
+        # 当該アウトプットを消去する
       else
         redirect_to  "/lessons/#{params[:id]}" ,method: :GET
       end

@@ -7,6 +7,7 @@ class UsersController < ApplicationController
   end
 
   def update
+    # ヘッダーのオンオフボタンからアクセス
     if current_user.on_off == 0
       current_user.on_off = 1
       current_user.save
