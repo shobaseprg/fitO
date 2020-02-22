@@ -1,4 +1,5 @@
 class LessonsController < ApplicationController
+
   
   def  update
     # インプットをアウトプットに移行させる
@@ -21,12 +22,6 @@ class LessonsController < ApplicationController
     else
       redirect_to "/lessons/new "
     end
-
-    respond_to do |format|
-      format.html
-      format.json
-    end
-    
   end
 
   def show
