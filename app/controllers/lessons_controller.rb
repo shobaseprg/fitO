@@ -22,6 +22,10 @@ class LessonsController < ApplicationController
     else
       redirect_to "/lessons/new "
     end
+    respond_to do |format|
+      format.html
+      format.json
+    end
   end
 
   def show
