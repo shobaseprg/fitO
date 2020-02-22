@@ -62,21 +62,9 @@
       </div>
       <% num = 1 %>
         <%  @lessonsBases.each do|lessons|%>
-          <div class ="oneLessonBox">
-            <div class = "lessonNumber">
-              lesson :
-              <%= num%>
-            </div>
-            <% lessons.each do|lesson|%>
-              <div class ="titleOfLesson">
-                <%= link_to " # #{lesson.title}","/lessons/#{lesson.id}/inputs" %>
-                <% inputLength = lesson.inputs.where(input_or_output:1) %>
-                ====> 投稿数
-                [<%= inputLength.length%>]
-              </div>
-            <% end%>
-          <% num += 1%>
-          </div>
+            <%= render partial: "lessonPart", locals: { lessons: lessons ,num:num,input_or_output:1} %>
+            <%# 部分テンプレート呼び出し %>
+            <% num += 1%>
         <% end %>
   </div>
 
@@ -87,21 +75,9 @@
     </div>
       <% num = 1 %>
         <% @lessonsDevs.each do|lessons|%>
-          <div class ="oneLessonBox">
-            <div class = "lessonNumber">
-            lesson :
-            <%= num%>
-            </div>
-              <% lessons.each do|lesson|%>
-                <div class ="titleOfLesson">
-                  <%= link_to " # #{lesson.title}","/lessons/#{lesson.id}/inputs" %> 
-                  <% inputLength = lesson.inputs.where(input_or_output:1) %>
-                  ====> 投稿数
-                  [<%= inputLength.length%>]
-                </div>
-              <% end%>
+            <%= render partial: "lessonPart", locals: { lessons: lessons ,num:num,input_or_output:1} %>
+            <%# 部分テンプレート呼び出し %>
             <% num += 1%>
-            </div>
           <% end %>
   </div>
 
@@ -113,23 +89,10 @@
     </div>
       <% num = 1 %>
         <%  @lessonsBases.each do|lessons|%>
-          <div class ="oneLessonBox">
-            <div class = "lessonNumber">
-              lesson :
-              <%= num%>
-            </div>
-              <% lessons.each do|lesson|%>
-                <div class ="titleOfLesson">
-                  <%= link_to " # #{lesson.title}","/lessons/#{lesson.id}/inputs/1" %>
-              <%# 行き先：input#show (アウトプット一覧を表示する) %>
-                  <% inputLength = lesson.inputs.where(input_or_output:2) %>
-                  ====> 投稿数
-                  [<%= inputLength.length%>]
-                </div>
-              <% end%>
-              <% num += 1%>
-            </div>
-          <% end %>
+          <%= render partial: "lessonPart", locals: { lessons: lessons ,num:num,input_or_output:2} %>
+          <%# 部分テンプレート呼び出し %>
+          <% num += 1%>
+        <% end %>
   </div>
   
 
@@ -140,26 +103,13 @@
   </div>
     <% num = 1 %>
       <%  @lessonsDevs.each do|lessons|%>
-        <div class ="oneLessonBox">
-          <div class = "lessonNumber">
-            lesson :
-            <%= num%>
-          </div>
-          <% lessons.each do|lesson|%>
-            <div class ="titleOfLesson">
-              <%= link_to " # #{lesson.title}","/lessons/#{lesson.id}/inputs/1" %>      
-              <% inputLength = lesson.inputs.where(input_or_output:2) %>                 
-                ====> 投稿数
-              [<%= inputLength.length%>]
-            </div>
-          <% end%>
-          <% num += 1%>
-        </div>  
+        <%= render partial: "lessonPart", locals: { lessons: lessons ,num:num,input_or_output:2} %>
+        <%# 部分テンプレート呼び出し %>
+        <% num += 1%>
       <% end %>
 </div>
 
-
-
+<%# フッター　ホーム　ヒント　リターン %>
 <footer>
   <div class="account_btn footerBtnReturn homeBtn">
     <%= link_to " home","/" %>  

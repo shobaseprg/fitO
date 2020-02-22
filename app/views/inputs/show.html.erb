@@ -29,19 +29,22 @@
         </div>
 
         <% if output.user.on_off == 0%>
+        <%# 投稿者が欠席なら色つかない %>
           <div class ="input_slack">
             <span> slack  :  </span>
             <%= output.user.slack%>
           </div>
           <% else%>
           <div class ="input_slack_on">
+          <%# 投稿者が出席なら赤く色つく %>
             <span> slack  :  </span>
             <%= output.user.slack%>
           </div>
         <% end %>
 
         <% if user_signed_in? && current_user.id != output.user.id %>
-        <%# 自分のoutputには教えてもらったは表示させない。 %>
+        <%# 自分のoutputには【thanks】は表示させない。 %>
+        <%# カレントユーザーとアウトプットユーザーが異なる時だけ通る %>
           <div class = "deleteOutput clearInputBtn">
             <%= link_to "thanks!!", "/lessons/#{output.id}" ,method: :GET %>
           </div>
@@ -61,7 +64,7 @@
   <div class="account_btn footerBtnReturn reBtn">
   <%= link_to " return","/all_outputs" %>  
   </div>
-      <%# @lesson_id は showコントローラで定義している  %>
+      <%# @lesson_id は inputs#showコントローラで定義している  %>
         <%= link_to "create input" ,"/lessons/#{@lesson_id}/inputs/new",class: "account_btn footerBtn" %>
         <%# 同一項目に新しいinputを作成する。 %>
 </footer>

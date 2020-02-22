@@ -1,0 +1,22 @@
+<div class ="oneLessonBox">
+            <div class = "lessonNumber">
+              lesson :
+              <%= num%>
+            </div>
+            <% lessons.each do|lesson|%>
+              <div class ="titleOfLesson">
+
+                <% if input_or_output == 1%>
+                <%# インプットの時はインプット一覧へ飛ぶ %>
+                <%= link_to " # #{lesson.title}","/lessons/#{lesson.id}/inputs" %>
+                <% else %>
+                <%# アウトプットの時はアウトプット一覧へ飛ぶ %>
+                <%= link_to " # #{lesson.title}","/lessons/#{lesson.id}/inputs/1" %>
+                <% end %>
+                
+                <% inputLength = lesson.inputs.where(input_or_output:input_or_output) %>
+                ====> 投稿数
+                [<%= inputLength.length%>]
+              </div>
+            <% end%>
+          </div>

@@ -39,7 +39,7 @@
 <%#  マイページインプット------------------------------------------- %>
 <div class = 'my_input_wrappar mypageInput mypageNonShow '>
   <% @myinputs.each do |myinput| %>
-    <div class= "input-box"> 
+   <div class= "input-box"> 
         <div class = "input-title">
           <%= myinput.title %>
           
@@ -64,6 +64,7 @@
           <%= link_to "Clear Input",  "/lessons/#{myinput.id}" ,method: :PATCH %>
         </div>
     </div>    <%# "input-box">  %>
+
   <% end %>  <%# each %>
 </div><%# 'input_wrappar'> %>
 <footer>

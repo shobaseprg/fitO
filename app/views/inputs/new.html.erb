@@ -5,15 +5,12 @@
 <div class ="newInputBox">
 
     <%= form_with(model: @input, :url => { :controller => :inputs, :action => :create },local: true) do |form| %>
-      
       <div>
       <%= form.text_field :title, placeholder: "title" ,class: "inputForm"%>
       </div>
-
       <div>
       <%= form.text_area :content, placeholder: "content" , rows: "15" ,class: "inputForm"%>
       </div>
-
       <div>
       <%= form.text_field :image, placeholder: "image" ,class: "inputForm" %>
       </div>
@@ -24,6 +21,7 @@
 </div>
 </div>
 </div>
+
 <footer>
   <div class="account_btn footerBtnReturn homeBtn">
     <%= link_to " home","/" %>  
