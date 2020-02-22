@@ -27,25 +27,25 @@
         </div>
 
         <div class = "header__up__account">
-          <%# <% if user_signed_in? %> %>
+          <% if user_signed_in? %>
             
-            <%# <%if current_user.on_off ==0%> %>
+            <%if current_user.on_off ==0%>
             <%# スイッチオフの場合 %>
-              <%# <%= link_to "OFF", "/users/#{current_user.id}",method: :PATCH,class: "account_btn offBtn" %>
-              <%# <% else%>  %>
+              <%= link_to "OFF", "/users/#{current_user.id}",method: :PATCH,class: "account_btn offBtn" %>
+              <% else%>
             <%# スイッチオンの場合 %>
-              <%# <%= link_to "ON", "/users/#{current_user.id}",method: :PATCH,class: "account_btn onBtn" %> %>
-            <%# <% end %> %>
+              <%= link_to "ON", "/users/#{current_user.id}",method: :PATCH,class: "account_btn onBtn" %>
+            <% end %>
             <%# 常時表示 %>
-              <%# <%= link_to "My page", "/users/#{current_user.id}",class: "account_btn" %> %>
-              <%# <%= link_to "Account edit ", edit_user_registration_path, method: :get, class: "account_btn" %> %>
-              <%# <%= link_to "Log Out ", destroy_user_session_path, method: :delete, class: "account_btn" %> %>
-            <%# <% else %> %>
+              <%= link_to "My page", "/users/#{current_user.id}",class: "account_btn" %>
+              <%= link_to "Account edit ", edit_user_registration_path, method: :get, class: "account_btn" %>
+              <%= link_to "Log Out ", destroy_user_session_path, method: :delete, class: "account_btn" %>
+            <% else %>
             <%# ログアウト時 %>
-            <%# <%= link_to "log in", new_user_session_path, class: "account_btn" %> %>
-            <%# <%= link_to "create", new_user_registration_path, class: "account_btn" %> %>
-          <%# <% end %> %>
-        <%# </div> %>
+            <%= link_to "log in", new_user_session_path, class: "account_btn" %>
+            <%= link_to "create", new_user_registration_path, class: "account_btn" %>
+          <% end %>
+        </div>
       </div>
 
     <% if user_signed_in? %>
