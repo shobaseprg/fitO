@@ -80,6 +80,9 @@ test:
 #
 production:
   <<: *default
-  database: fitO_production
-  username: fitO
-  password: <%= ENV['FITO_DATABASE_PASSWORD'] %>
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  # database: fitO_production
+  # username: fitO
+  # password: <%= ENV['FITO_DATABASE_PASSWORD'] %>
