@@ -1,6 +1,5 @@
 class UsersController < ApplicationController
   
-  before_action :move_to_index
 
   def show
     # マイページ表示用コントローラー（インプット、アウトプット振り分け）
@@ -21,8 +20,5 @@ class UsersController < ApplicationController
     redirect_to "/"
   end
 
-  def move_to_index
-    redirect_to action: :index unless user_signed_in?
-  end
 
 end
