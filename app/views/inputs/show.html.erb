@@ -1,4 +1,15 @@
 <%# 投稿アウトプット一覧表示用 %>
+<div class="hintBox">
+  <div class="hintClose">
+  close
+  </div>
+    <div class= "hintContnet">
+      <p>・アウトプット掲示板です</p>
+      <p>・この掲示板の投稿は、すでに解決済の投稿です。</p>
+      <p>・スラックを通じて連絡をとり、教えてもらったらthanks!!ボタンを押しましょう</p>
+      <p>・遷移する画面で、教えてもらった方の名前を入力しましょう。</p>
+    </div>
+</div>
 
 <div class ="totalInputFrame">
 <div class = 'input_wrappar'>
@@ -41,6 +52,12 @@
 </div>
 
 <footer>
+<div class="account_btn footerBtnReturn hintBtn">
+hint
+</div>
+<div class="account_btn footerBtnReturn reBtn">
+retrun
+</div>
     <%# @lesson_id は showコントローラで定義している  %>
       <%= link_to "create input" ,"/lessons/#{@lesson_id}/inputs/new",class: "account_btn footerBtn" %>
       <%# 同一項目に新しいinputを作成する。 %>

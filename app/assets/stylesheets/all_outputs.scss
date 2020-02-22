@@ -57,6 +57,7 @@
 .active-defult-lesson{
   display: block;
   font-size: 50px;
+  padding-top: 600px;
   text-align: center;
 }
 
@@ -64,6 +65,22 @@
 .non-defult-lesson{
   display: none;
 }
+
+.lessonsBoxform_def{
+  position: absolute;
+  top:350px;
+  right: 600px;
+  left: 600px;
+  bottom: 100px;
+  background-color:white;
+  border:solid;
+  border-radius: 20px;
+  background: image-url("tecmain.jpg");
+  background-size:cover;
+  background-repeat: no-repeat;
+
+  } 
+
 
 // レッスンボックス形用
 .lessonsBoxform{

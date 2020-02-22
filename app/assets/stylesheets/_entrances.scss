@@ -61,7 +61,6 @@
     background-color:gray;
    }
 
-   
 }
 
 footer{
@@ -77,6 +76,7 @@ footer{
   border:solid;
   display: flex;
   justify-content: center;
+  background-color: white;
 }
 
 .footerBtn{
@@ -84,4 +84,15 @@ footer{
   margin-top: 10px;
   background-color: red;
   border-color:yellow;
+}
+
+.footerBtnReturn{
+  border:solid;
+  margin-top: 10px;
+  border-color:gray;
+}
+
+.hintBox
+{
+  
 }
