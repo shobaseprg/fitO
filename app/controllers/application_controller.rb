@@ -1,13 +1,10 @@
 class ApplicationController < ActionController::Base
-  before_action :move_to_index
 
   protect_from_forgery with: :exception
   before_action :authenticate_user!
   before_action :configure_permitted_parameters, if: :devise_controller?
 
-  def move_to_index
-    redirect_to action: :index unless user_signed_in?
-  end
+
 
   protected
 
