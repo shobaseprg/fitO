@@ -14,7 +14,6 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.2]
       t.integer :period,            null: false, default: ""
       t.string :team,                null: false, default: ""
       t.integer :output_times, default: "0"    
-      t.integer :on_off,default: "0"
       t.integer :rank
 
       ## Recoverable

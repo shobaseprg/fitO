@@ -43,4 +43,21 @@ ActiveRecord::Schema.define(version: 2020_02_14_172153) do
     t.string "title"
   end
 
+  create_table "users", force: :cascade do |t|
+    t.string "name", default: "", null: false
+    t.string "slack", default: "", null: false
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.integer "period", null: false
+    t.string "team", default: "", null: false
+    t.integer "output_times", default: 0
+    t.integer "rank"
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  end
+
 end
