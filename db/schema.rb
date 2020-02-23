@@ -51,6 +51,7 @@ ActiveRecord::Schema.define(version: 2020_02_14_172153) do
     t.integer "period", null: false
     t.string "team", default: "", null: false
     t.integer "output_times", default: 0
+    t.integer "on_off", default: 0
     t.integer "rank"
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
