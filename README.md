@@ -1,4 +1,4 @@
-## アプリ名：fito
+## アプリ名：fitO
 
 ・開発環境（rails、mac、postgresql、heroku）
 
@@ -14,4 +14,8 @@
 ![ff1a29dcbea56ab3f223d6c2956e2471 (1) (1)](https://user-images.githubusercontent.com/58842818/81273157-740ab700-9089-11ea-80cc-3377d0cceaf1.gif)
 
 ②教えたい(アウトプット)したい人(sho1さん)は、「教えてください（インプット)掲示板」を確認し、教えたい内容の質問があれば投稿者に連絡をとり教えてあげる。
+
+![unnamed](https://user-images.githubusercontent.com/58842818/81273891-820d0780-908a-11ea-8718-8109b12edf8b.gif)
+
+③教えてもらった人(けんたさん）は、マイページから、教えてくれた人（sho1さん）の名前を入力する。
 
