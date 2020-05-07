@@ -23,7 +23,7 @@
 
 ④するとその投稿は「教えてください（インプット）掲示板」から、「教えます（アウトプット）掲示板」に移動する。
 
-![unnamed (3)](https://user-images.githubusercontent.com/58842818/81274638-8685f000-908b-11ea-8f2a-989d3a54d43e.gif)
+![unnamed (4)](https://user-images.githubusercontent.com/58842818/81274626-84239600-908b-11ea-8c83-9cb54a61c2c2.gif)
 
 ⑤質問した人は、今度は教える側の立ち場となり、投稿を見て質問してきた別の人（たけおさん）に教えてあげ、教えられた人が投稿者の名前（けんたさん）を入力したら「教えます（アウトプット）掲示板」から削除される。（投稿者以外の名前は弾く）
 ![kenta](https://user-images.githubusercontent.com/58842818/81277401-550f2380-908f-11ea-87f9-5b9534d8ee70.gif)
