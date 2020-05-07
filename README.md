@@ -14,6 +14,7 @@
 ![ff1a29dcbea56ab3f223d6c2956e2471 (1) (1)](https://user-images.githubusercontent.com/58842818/81273157-740ab700-9089-11ea-80cc-3377d0cceaf1.gif)
 
 ②教えたい(アウトプット)したい人(sho1さん)は、「教えてください（インプット)掲示板」を確認し、教えたい内容の質問があれば投稿者に連絡をとり教えてあげる。
+
 ![222](https://user-images.githubusercontent.com/58842818/81278431-a1a72e80-9090-11ea-87b7-845738baadbb.gif)
 
 ③教えてもらった人(けんたさん）は、マイページから、教えてくれた人（sho1さん）の名前を入力する。
